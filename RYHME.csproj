@@ -10,10 +10,15 @@
 
   <ItemGroup>
     <Folder Include="model\" />
+    <Folder Include="view\" />
+    <Folder Include="Services\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.1.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
   </ItemGroup>
 
 </Project>
