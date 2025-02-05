@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="model\" />
-    <Folder Include="view\" />
     <Folder Include="Services\" />
     <Folder Include="Utils\" />
   </ItemGroup>

@@ -15,82 +15,89 @@ namespace RYHME
 
         private void InitializeComponent()
         {
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.chkRememberMe = new System.Windows.Forms.CheckBox();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            btnLogin = new Button();
+            chkRememberMe = new CheckBox();
+            lblUsername = new Label();
+            lblPassword = new Label();
+            SuspendLayout();
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(100, 50);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 23);
-            this.txtUsername.TabIndex = 0;
+            txtUsername.Location = new Point(143, 83);
+            txtUsername.Margin = new Padding(4, 5, 4, 5);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(284, 31);
+            txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(100, 100);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(200, 23);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.UseSystemPasswordChar = true;
+            txtPassword.Location = new Point(143, 167);
+            txtPassword.Margin = new Padding(4, 5, 4, 5);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(284, 31);
+            txtPassword.TabIndex = 1;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(100, 200);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(200, 23);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            btnLogin.Location = new Point(143, 333);
+            btnLogin.Margin = new Padding(4, 5, 4, 5);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(286, 38);
+            btnLogin.TabIndex = 2;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // chkRememberMe
             // 
-            this.chkRememberMe.AutoSize = true;
-            this.chkRememberMe.Location = new System.Drawing.Point(100, 150);
-            this.chkRememberMe.Name = "chkRememberMe";
-            this.chkRememberMe.Size = new System.Drawing.Size(104, 19);
-            this.chkRememberMe.TabIndex = 3;
-            this.chkRememberMe.Text = "Remember Me";
-            this.chkRememberMe.UseVisualStyleBackColor = true;
+            chkRememberMe.AutoSize = true;
+            chkRememberMe.Location = new Point(143, 250);
+            chkRememberMe.Margin = new Padding(4, 5, 4, 5);
+            chkRememberMe.Name = "chkRememberMe";
+            chkRememberMe.Size = new Size(154, 29);
+            chkRememberMe.TabIndex = 3;
+            chkRememberMe.Text = "Remember Me";
+            chkRememberMe.UseVisualStyleBackColor = true;
             // 
             // lblUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(100, 30);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(60, 15);
-            this.lblUsername.TabIndex = 4;
-            this.lblUsername.Text = "Username";
+            lblUsername.AutoSize = true;
+            lblUsername.Location = new Point(143, 50);
+            lblUsername.Margin = new Padding(4, 0, 4, 0);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(91, 25);
+            lblUsername.TabIndex = 4;
+            lblUsername.Text = "Username";
             // 
             // lblPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(100, 80);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(57, 15);
-            this.lblPassword.TabIndex = 5;
-            this.lblPassword.Text = "Password";
+            lblPassword.AutoSize = true;
+            lblPassword.Location = new Point(143, 137);
+            lblPassword.Margin = new Padding(4, 0, 4, 0);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(87, 25);
+            lblPassword.TabIndex = 5;
+            lblPassword.Text = "Password";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 300);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.chkRememberMe);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Name = "LoginForm";
-            this.Text = "Login";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(571, 500);
+            Controls.Add(lblPassword);
+            Controls.Add(lblUsername);
+            Controls.Add(chkRememberMe);
+            Controls.Add(btnLogin);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "LoginForm";
+            Text = "Login";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.TextBox txtUsername;
