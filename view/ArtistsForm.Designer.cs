@@ -95,15 +95,15 @@ namespace RYHME.view
             // 
             // addButton
             // 
-            addButton.Location = new Point(688, 50);
+            addButton.Location = new Point(674, 47);
             addButton.Name = "addButton";
-            addButton.Size = new Size(78, 33);
+            addButton.Size = new Size(92, 36);
             addButton.TabIndex = 8;
             addButton.Text = "Add";
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(567, 100);
+            updateButton.Location = new Point(548, 100);
             updateButton.Name = "updateButton";
             updateButton.Size = new Size(84, 36);
             updateButton.TabIndex = 9;
@@ -111,9 +111,9 @@ namespace RYHME.view
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(688, 101);
+            deleteButton.Location = new Point(674, 100);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(78, 34);
+            deleteButton.Size = new Size(92, 36);
             deleteButton.TabIndex = 10;
             deleteButton.Text = "Delete";
             // 
@@ -143,7 +143,7 @@ namespace RYHME.view
             // 
             // refreshButton
             // 
-            refreshButton.Location = new Point(567, 47);
+            refreshButton.Location = new Point(548, 47);
             refreshButton.Name = "refreshButton";
             refreshButton.Size = new Size(84, 36);
             refreshButton.TabIndex = 14;

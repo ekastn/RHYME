@@ -33,6 +33,7 @@
             txtPassword = new TextBox();
             txtRePassword = new TextBox();
             btnRegister = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // txtUsername
@@ -73,19 +74,31 @@
             // 
             // btnRegister
             // 
+            btnRegister.BackColor = SystemColors.AppWorkspace;
             btnRegister.Location = new Point(189, 359);
             btnRegister.Margin = new Padding(4, 5, 4, 5);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(121, 38);
             btnRegister.TabIndex = 6;
             btnRegister.Text = "Register";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(190, 414);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 25);
+            label1.TabIndex = 7;
+            label1.Text = "back to Login";
+            label1.Click += label1_Click;
             // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(512, 479);
+            Controls.Add(label1);
             Controls.Add(btnRegister);
             Controls.Add(txtRePassword);
             Controls.Add(txtPassword);
@@ -104,5 +117,6 @@
         private TextBox txtPassword;
         private TextBox txtRePassword;
         private Button btnRegister;
+        private Label label1;
     }
 }

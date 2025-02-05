@@ -86,7 +86,7 @@ namespace RYHME
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(571, 500);
+            ClientSize = new Size(571, 428);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
             Controls.Add(chkRememberMe);
