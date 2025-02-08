@@ -53,6 +53,7 @@
             txtNama.Size = new Size(364, 31);
             txtNama.TabIndex = 3;
             txtNama.Text = "nama";
+            txtNama.TextChanged += txtNama_TextChanged;
             // 
             // txtPassword
             // 

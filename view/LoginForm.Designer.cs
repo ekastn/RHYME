@@ -30,6 +30,7 @@ namespace RYHME
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(284, 31);
             txtUsername.TabIndex = 0;
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 

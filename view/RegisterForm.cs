@@ -21,5 +21,10 @@ namespace RYHME.view
         {
 
         }
+
+        private void txtNama_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
