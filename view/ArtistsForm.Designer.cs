@@ -35,125 +35,144 @@ namespace RYHME.view
             // 
             // nameLabel
             // 
-            nameLabel.Location = new Point(20, 20);
+            nameLabel.Location = new Point(16, 16);
+            nameLabel.Margin = new Padding(2, 0, 2, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(100, 23);
+            nameLabel.Size = new Size(80, 18);
             nameLabel.TabIndex = 0;
             nameLabel.Text = "Name";
             // 
             // genreLabel
             // 
-            genreLabel.Location = new Point(20, 60);
+            genreLabel.Location = new Point(16, 48);
+            genreLabel.Margin = new Padding(2, 0, 2, 0);
             genreLabel.Name = "genreLabel";
-            genreLabel.Size = new Size(100, 23);
+            genreLabel.Size = new Size(80, 18);
             genreLabel.TabIndex = 1;
             genreLabel.Text = "Genre";
             // 
             // contactLabel
             // 
-            contactLabel.Location = new Point(20, 100);
+            contactLabel.Location = new Point(16, 80);
+            contactLabel.Margin = new Padding(2, 0, 2, 0);
             contactLabel.Name = "contactLabel";
-            contactLabel.Size = new Size(100, 23);
+            contactLabel.Size = new Size(80, 18);
             contactLabel.TabIndex = 2;
             contactLabel.Text = "Contact";
             // 
             // profilePictureLabel
             // 
-            profilePictureLabel.Location = new Point(20, 140);
+            profilePictureLabel.Location = new Point(16, 112);
+            profilePictureLabel.Margin = new Padding(2, 0, 2, 0);
             profilePictureLabel.Name = "profilePictureLabel";
-            profilePictureLabel.Size = new Size(100, 23);
+            profilePictureLabel.Size = new Size(80, 18);
             profilePictureLabel.TabIndex = 3;
             profilePictureLabel.Text = "Profile Picture";
             // 
             // nameTextBox
             // 
-            nameTextBox.Location = new Point(120, 20);
+            nameTextBox.Location = new Point(96, 16);
+            nameTextBox.Margin = new Padding(2, 2, 2, 2);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(361, 31);
+            nameTextBox.Size = new Size(290, 27);
             nameTextBox.TabIndex = 4;
             // 
             // genreTextBox
             // 
-            genreTextBox.Location = new Point(120, 60);
+            genreTextBox.Location = new Point(96, 48);
+            genreTextBox.Margin = new Padding(2, 2, 2, 2);
             genreTextBox.Name = "genreTextBox";
-            genreTextBox.Size = new Size(361, 31);
+            genreTextBox.Size = new Size(290, 27);
             genreTextBox.TabIndex = 5;
             // 
             // contactTextBox
             // 
-            contactTextBox.Location = new Point(120, 100);
+            contactTextBox.Location = new Point(96, 80);
+            contactTextBox.Margin = new Padding(2, 2, 2, 2);
             contactTextBox.Name = "contactTextBox";
-            contactTextBox.Size = new Size(361, 31);
+            contactTextBox.Size = new Size(290, 27);
             contactTextBox.TabIndex = 6;
             // 
             // profilePictureTextBox
             // 
-            profilePictureTextBox.Location = new Point(120, 140);
+            profilePictureTextBox.Location = new Point(96, 112);
+            profilePictureTextBox.Margin = new Padding(2, 2, 2, 2);
             profilePictureTextBox.Name = "profilePictureTextBox";
-            profilePictureTextBox.Size = new Size(361, 31);
+            profilePictureTextBox.Size = new Size(290, 27);
             profilePictureTextBox.TabIndex = 7;
             // 
             // addButton
             // 
-            addButton.Location = new Point(674, 47);
+            addButton.Location = new Point(539, 38);
+            addButton.Margin = new Padding(2, 2, 2, 2);
             addButton.Name = "addButton";
-            addButton.Size = new Size(92, 36);
+            addButton.Size = new Size(74, 29);
             addButton.TabIndex = 8;
             addButton.Text = "Add";
+            addButton.Click += addButton_Click;
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(548, 100);
+            updateButton.Location = new Point(438, 80);
+            updateButton.Margin = new Padding(2, 2, 2, 2);
             updateButton.Name = "updateButton";
-            updateButton.Size = new Size(84, 36);
+            updateButton.Size = new Size(67, 29);
             updateButton.TabIndex = 9;
             updateButton.Text = "Update";
+            updateButton.Click += updateButton_Click;
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(674, 100);
+            deleteButton.Location = new Point(539, 80);
+            deleteButton.Margin = new Padding(2, 2, 2, 2);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(92, 36);
+            deleteButton.Size = new Size(74, 29);
             deleteButton.TabIndex = 10;
             deleteButton.Text = "Delete";
+            deleteButton.Click += deleteButton_Click;
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(20, 217);
+            searchTextBox.Location = new Point(16, 174);
+            searchTextBox.Margin = new Padding(2, 2, 2, 2);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(239, 31);
+            searchTextBox.Size = new Size(192, 27);
             searchTextBox.TabIndex = 11;
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(309, 217);
+            searchButton.Location = new Point(247, 174);
+            searchButton.Margin = new Padding(2, 2, 2, 2);
             searchButton.Name = "searchButton";
-            searchButton.Size = new Size(78, 34);
+            searchButton.Size = new Size(62, 27);
             searchButton.TabIndex = 12;
             searchButton.Text = "Search";
+            searchButton.Click += searchButton_Click;
             // 
             // artistsDataGridView
             // 
             artistsDataGridView.ColumnHeadersHeight = 34;
-            artistsDataGridView.Location = new Point(20, 260);
+            artistsDataGridView.Location = new Point(16, 208);
+            artistsDataGridView.Margin = new Padding(2, 2, 2, 2);
             artistsDataGridView.Name = "artistsDataGridView";
             artistsDataGridView.RowHeadersWidth = 62;
-            artistsDataGridView.Size = new Size(760, 180);
+            artistsDataGridView.Size = new Size(608, 144);
             artistsDataGridView.TabIndex = 13;
             // 
             // refreshButton
             // 
-            refreshButton.Location = new Point(548, 47);
+            refreshButton.Location = new Point(438, 38);
+            refreshButton.Margin = new Padding(2, 2, 2, 2);
             refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(84, 36);
+            refreshButton.Size = new Size(67, 29);
             refreshButton.TabIndex = 14;
             refreshButton.Text = "Refresh";
             // 
             // ArtistsForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(640, 360);
             Controls.Add(refreshButton);
             Controls.Add(nameLabel);
             Controls.Add(genreLabel);
@@ -169,6 +188,7 @@ namespace RYHME.view
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
             Controls.Add(artistsDataGridView);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "ArtistsForm";
             Text = "ArtistsForm";
             ((System.ComponentModel.ISupportInitialize)artistsDataGridView).EndInit();

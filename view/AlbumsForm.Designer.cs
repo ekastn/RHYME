@@ -23,7 +23,7 @@ namespace RYHME.view
             coverImageLabel = new Label();
             idTextBox = new TextBox();
             titleTextBox = new TextBox();
-            artistComboBox = new ComboBox();
+            artistsComboBox = new ComboBox();
             releaseYearTextBox = new TextBox();
             genreTextBox = new TextBox();
             coverImageTextBox = new TextBox();
@@ -39,133 +39,150 @@ namespace RYHME.view
             // 
             // idLabel
             // 
-            idLabel.Location = new Point(21, 194);
+            idLabel.Location = new Point(17, 155);
+            idLabel.Margin = new Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new Size(100, 23);
+            idLabel.Size = new Size(80, 18);
             idLabel.TabIndex = 0;
             idLabel.Text = "ID";
             // 
             // titleLabel
             // 
-            titleLabel.Location = new Point(21, 156);
+            titleLabel.Location = new Point(17, 125);
+            titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(100, 23);
+            titleLabel.Size = new Size(80, 18);
             titleLabel.TabIndex = 1;
             titleLabel.Text = "Title";
             // 
             // artistLabel
             // 
-            artistLabel.Location = new Point(21, 116);
+            artistLabel.Location = new Point(17, 93);
+            artistLabel.Margin = new Padding(2, 0, 2, 0);
             artistLabel.Name = "artistLabel";
-            artistLabel.Size = new Size(100, 23);
+            artistLabel.Size = new Size(80, 18);
             artistLabel.TabIndex = 2;
             artistLabel.Text = "Artist";
             // 
             // releaseYearLabel
             // 
-            releaseYearLabel.Location = new Point(21, 78);
+            releaseYearLabel.Location = new Point(17, 62);
+            releaseYearLabel.Margin = new Padding(2, 0, 2, 0);
             releaseYearLabel.Name = "releaseYearLabel";
-            releaseYearLabel.Size = new Size(100, 23);
+            releaseYearLabel.Size = new Size(80, 18);
             releaseYearLabel.TabIndex = 3;
             releaseYearLabel.Text = "Release Year";
             // 
             // genreLabel
             // 
-            genreLabel.Location = new Point(21, 45);
+            genreLabel.Location = new Point(17, 36);
+            genreLabel.Margin = new Padding(2, 0, 2, 0);
             genreLabel.Name = "genreLabel";
-            genreLabel.Size = new Size(100, 23);
+            genreLabel.Size = new Size(80, 18);
             genreLabel.TabIndex = 4;
             genreLabel.Text = "Genre";
             // 
             // coverImageLabel
             // 
-            coverImageLabel.Location = new Point(21, 11);
+            coverImageLabel.Location = new Point(17, 9);
+            coverImageLabel.Margin = new Padding(2, 0, 2, 0);
             coverImageLabel.Name = "coverImageLabel";
-            coverImageLabel.Size = new Size(100, 23);
+            coverImageLabel.Size = new Size(80, 18);
             coverImageLabel.TabIndex = 5;
             coverImageLabel.Text = "Cover Image";
             // 
             // idTextBox
             // 
-            idTextBox.Location = new Point(127, 194);
+            idTextBox.Location = new Point(102, 155);
+            idTextBox.Margin = new Padding(2, 2, 2, 2);
             idTextBox.Name = "idTextBox";
-            idTextBox.Size = new Size(330, 31);
+            idTextBox.Size = new Size(265, 27);
             idTextBox.TabIndex = 6;
             // 
             // titleTextBox
             // 
-            titleTextBox.Location = new Point(127, 157);
+            titleTextBox.Location = new Point(102, 126);
+            titleTextBox.Margin = new Padding(2, 2, 2, 2);
             titleTextBox.Name = "titleTextBox";
-            titleTextBox.Size = new Size(330, 31);
+            titleTextBox.Size = new Size(265, 27);
             titleTextBox.TabIndex = 7;
             // 
-            // artistComboBox
+            // artistsComboBox
             // 
-            artistComboBox.Location = new Point(127, 118);
-            artistComboBox.Name = "artistComboBox";
-            artistComboBox.Size = new Size(330, 33);
-            artistComboBox.TabIndex = 8;
+            artistsComboBox.Location = new Point(102, 94);
+            artistsComboBox.Margin = new Padding(2, 2, 2, 2);
+            artistsComboBox.Name = "artistsComboBox";
+            artistsComboBox.Size = new Size(265, 28);
+            artistsComboBox.TabIndex = 8;
             // 
             // releaseYearTextBox
             // 
-            releaseYearTextBox.Location = new Point(127, 82);
+            releaseYearTextBox.Location = new Point(102, 66);
+            releaseYearTextBox.Margin = new Padding(2, 2, 2, 2);
             releaseYearTextBox.Name = "releaseYearTextBox";
-            releaseYearTextBox.Size = new Size(330, 31);
+            releaseYearTextBox.Size = new Size(265, 27);
             releaseYearTextBox.TabIndex = 9;
             // 
             // genreTextBox
             // 
-            genreTextBox.Location = new Point(127, 45);
+            genreTextBox.Location = new Point(102, 36);
+            genreTextBox.Margin = new Padding(2, 2, 2, 2);
             genreTextBox.Name = "genreTextBox";
-            genreTextBox.Size = new Size(330, 31);
+            genreTextBox.Size = new Size(265, 27);
             genreTextBox.TabIndex = 10;
             // 
             // coverImageTextBox
             // 
-            coverImageTextBox.Location = new Point(127, 12);
+            coverImageTextBox.Location = new Point(102, 10);
+            coverImageTextBox.Margin = new Padding(2, 2, 2, 2);
             coverImageTextBox.Name = "coverImageTextBox";
-            coverImageTextBox.Size = new Size(330, 31);
+            coverImageTextBox.Size = new Size(265, 27);
             coverImageTextBox.TabIndex = 11;
             // 
             // addButton
             // 
-            addButton.Location = new Point(689, 72);
+            addButton.Location = new Point(551, 58);
+            addButton.Margin = new Padding(2, 2, 2, 2);
             addButton.Name = "addButton";
-            addButton.Size = new Size(88, 36);
+            addButton.Size = new Size(70, 29);
             addButton.TabIndex = 12;
             addButton.Text = "Add";
             addButton.Click += addButton_Click;
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(546, 131);
+            updateButton.Location = new Point(437, 105);
+            updateButton.Margin = new Padding(2, 2, 2, 2);
             updateButton.Name = "updateButton";
-            updateButton.Size = new Size(86, 36);
+            updateButton.Size = new Size(69, 29);
             updateButton.TabIndex = 13;
             updateButton.Text = "Update";
             updateButton.Click += updateButton_Click;
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(689, 131);
+            deleteButton.Location = new Point(551, 105);
+            deleteButton.Margin = new Padding(2, 2, 2, 2);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(88, 36);
+            deleteButton.Size = new Size(70, 29);
             deleteButton.TabIndex = 14;
             deleteButton.Text = "Delete";
             deleteButton.Click += deleteButton_Click;
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(399, 239);
+            searchTextBox.Location = new Point(319, 191);
+            searchTextBox.Margin = new Padding(2, 2, 2, 2);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(271, 31);
+            searchTextBox.Size = new Size(218, 27);
             searchTextBox.TabIndex = 15;
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(690, 237);
+            searchButton.Location = new Point(552, 190);
+            searchButton.Margin = new Padding(2, 2, 2, 2);
             searchButton.Name = "searchButton";
-            searchButton.Size = new Size(87, 33);
+            searchButton.Size = new Size(70, 26);
             searchButton.TabIndex = 16;
             searchButton.Text = "Search";
             searchButton.Click += searchButton_Click;
@@ -173,25 +190,27 @@ namespace RYHME.view
             // albumsDataGridView
             // 
             albumsDataGridView.ColumnHeadersHeight = 34;
-            albumsDataGridView.Location = new Point(12, 276);
+            albumsDataGridView.Location = new Point(10, 221);
+            albumsDataGridView.Margin = new Padding(2, 2, 2, 2);
             albumsDataGridView.Name = "albumsDataGridView";
             albumsDataGridView.RowHeadersWidth = 62;
-            albumsDataGridView.Size = new Size(786, 220);
+            albumsDataGridView.Size = new Size(629, 176);
             albumsDataGridView.TabIndex = 17;
             // 
             // refreshButton
             // 
-            refreshButton.Location = new Point(548, 72);
+            refreshButton.Location = new Point(438, 58);
+            refreshButton.Margin = new Padding(2, 2, 2, 2);
             refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(84, 36);
+            refreshButton.Size = new Size(67, 29);
             refreshButton.TabIndex = 18;
             refreshButton.Text = "Refresh";
             // 
             // AlbumsForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(810, 508);
+            ClientSize = new Size(648, 406);
             Controls.Add(refreshButton);
             Controls.Add(idLabel);
             Controls.Add(titleLabel);
@@ -201,7 +220,7 @@ namespace RYHME.view
             Controls.Add(coverImageLabel);
             Controls.Add(idTextBox);
             Controls.Add(titleTextBox);
-            Controls.Add(artistComboBox);
+            Controls.Add(artistsComboBox);
             Controls.Add(releaseYearTextBox);
             Controls.Add(genreTextBox);
             Controls.Add(coverImageTextBox);
@@ -211,6 +230,7 @@ namespace RYHME.view
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
             Controls.Add(albumsDataGridView);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "AlbumsForm";
             Text = "AlbumsForm";
             ((System.ComponentModel.ISupportInitialize)albumsDataGridView).EndInit();
@@ -226,7 +246,7 @@ namespace RYHME.view
         private System.Windows.Forms.Label coverImageLabel;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox titleTextBox;
-        private System.Windows.Forms.ComboBox artistComboBox;
+        private System.Windows.Forms.ComboBox artistsComboBox;
         private System.Windows.Forms.TextBox releaseYearTextBox;
         private System.Windows.Forms.TextBox genreTextBox;
         private System.Windows.Forms.TextBox coverImageTextBox;
