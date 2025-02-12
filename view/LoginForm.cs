@@ -1,12 +1,16 @@
 using System;
 using System.Windows.Forms;
+using RYHME.Controllers;
 
 namespace RYHME
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        private readonly UserController _userController;
+
+        public LoginForm(UserController userController)
         {
+            _userController = userController;
             InitializeComponent();
         }
 
@@ -21,7 +25,8 @@ namespace RYHME
                 return;
             }
 
-            if (username == "admin" && password == "admin")
+            var user = _userController.AuthenticateUser(username, password);
+            if (user != null)
             {
                 // Login successful
                 this.Hide();

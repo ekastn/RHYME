@@ -1,49 +1,57 @@
 using System;
 using System.Windows.Forms;
+using RYHME.Controllers;
 
 namespace RYHME
 {
     public partial class DashboardForm : Form
     {
-        public DashboardForm()
+        private readonly ArtistController _artistController;
+        private readonly AlbumController _albumController;
+        private readonly SongController _songController;
+
+        public DashboardForm(ArtistController artistController, AlbumController albumController, SongController songController)
         {
+            _artistController = artistController;
+            _albumController = albumController;
+            _songController = songController;
             InitializeComponent();
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
-            // Load key statistics and display them on the dashboard
-            //LoadStatistics();
+            LoadStatistics();
         }
 
         private void LoadStatistics()
         {
-            //    // Example code to load statistics
-            //    lblTotalArtists.Text = "Total Artists: 10";
-            //    lblTotalAlbums.Text = "Total Albums: 5";
-            //    lblTotalSongs.Text = "Total Songs: 20";
-            //    lblUpcomingReleases.Text = "Upcoming Releases: 3";
+            var totalArtists = _artistController.GetAllArtists().Count;
+            var totalAlbums = _albumController.GetAllAlbums().Count;
+            var totalSongs = _songController.GetAllSongs().Count;
+            var upcomingReleases = 3; // Placeholder for actual logic
+
+            lblTotalArtists.Text = $"Total Artists: {totalArtists}";
+            lblTotalAlbums.Text = $"Total Albums: {totalAlbums}";
+            lblTotalSongs.Text = $"Total Songs: {totalSongs}";
+            lblUpcomingReleases.Text = $"Upcoming Releases: {upcomingReleases}";
         }
 
         private void btnAddArtist_Click(object sender, EventArgs e)
         {
-            //    // Open the ArtistsForm to add a new artist
-            //    ArtistsForm artistsForm = new ArtistsForm();
-            //    artistsForm.Show();
+            var artistsForm = new ArtistsForm(_artistController);
+            artistsForm.Show();
         }
 
         private void btnAddAlbum_Click(object sender, EventArgs e)
         {
-            //    // Open the AlbumsForm to add a new album
-            //    AlbumsForm albumsForm = new AlbumsForm();
-            //    albumsForm.Show();
+            var albumsForm = new AlbumsForm(_albumController, _artistController);
+            albumsForm.Show();
         }
 
         private void btnAddSong_Click(object sender, EventArgs e)
         {
-            //    // Open the SongsForm to add a new song
-            //    SongsForm songsForm = new SongsForm();
-            //    songsForm.Show();
+            var songsForm = new SongsForm(_songController, _albumController);
+            songsForm.Show();
         }
     }
 }
