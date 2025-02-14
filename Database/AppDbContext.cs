@@ -31,21 +31,27 @@ public class AppDbContext : DbContext
             .HasForeignKey(s => s.AlbumId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        modelBuilder.Entity<Artist>()
+            .HasOne(a => a.Manager)
+            .WithMany(u => u.Artists)
+            .HasForeignKey(a => a.ManagerId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         modelBuilder.Entity<Release>()
            .HasOne(r => r.Album)
-           .WithMany()
+           .WithMany(a => a.Releases)
            .HasForeignKey(r => r.AlbumId)
            .OnDelete(DeleteBehavior.Restrict);
 
         modelBuilder.Entity<Release>()
             .HasOne(r => r.Song)
-            .WithMany()
+            .WithMany(a => a.Releases)
             .HasForeignKey(r => r.SongId)
             .OnDelete(DeleteBehavior.Restrict);
 
         modelBuilder.Entity<Release>()
             .HasOne(r => r.CreatedBy)
-            .WithMany()
+            .WithMany(a => a.Releases)
             .HasForeignKey(r => r.CreatedByUserId)
             .OnDelete(DeleteBehavior.Restrict);
 

@@ -1,13 +1,23 @@
-﻿namespace RYHME.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RYHME.Models;
 
 public class Release
 {
+
+    [Key]
     public int Id { get; set; }
+
+    [Required]
+    [MaxLength(100)]
     public string Title { get; set; }
+
+    [Required]
     public ReleaseType Type { get; set; }  // Single or Album
+
     public int? AlbumId { get; set; }      // Null for singles
     public int? SongId { get; set; }       // Null for albums
-    public ReleaseStatus Status { get; set; }
+    public ReleaseStatus Status { get; set; } = ReleaseStatus.Draft; 
     public DateTime ScheduledDate { get; set; }
     public DateTime? ReleaseDate { get; set; }
     public string Notes { get; set; }

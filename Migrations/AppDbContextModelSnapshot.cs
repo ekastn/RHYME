@@ -40,7 +40,8 @@ namespace RYHME.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime(6)");
@@ -62,7 +63,8 @@ namespace RYHME.Migrations
 
                     b.Property<string>("Contact")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(32)
+                        .HasColumnType("varchar(32)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -71,16 +73,23 @@ namespace RYHME.Migrations
 
                     b.Property<string>("Genre")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(32)
+                        .HasColumnType("varchar(32)");
+
+                    b.Property<int>("ManagerId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ManagerId");
 
                     b.ToTable("Artists");
                 });
@@ -94,9 +103,6 @@ namespace RYHME.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int?>("AlbumId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AlbumId1")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -120,15 +126,13 @@ namespace RYHME.Migrations
                     b.Property<int?>("SongId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SongId1")
-                        .HasColumnType("int");
-
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");
@@ -136,22 +140,13 @@ namespace RYHME.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AlbumId");
 
-                    b.HasIndex("AlbumId1");
-
                     b.HasIndex("CreatedByUserId");
 
                     b.HasIndex("SongId");
-
-                    b.HasIndex("SongId1");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Releases");
                 });
@@ -172,12 +167,13 @@ namespace RYHME.Migrations
                         .HasColumnType("datetime(6)")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<TimeSpan>("Duration")
-                        .HasColumnType("time(6)");
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime(6)");
@@ -197,24 +193,31 @@ namespace RYHME.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Contact")
+                        .IsRequired()
+                        .HasMaxLength(32)
+                        .HasColumnType("varchar(32)");
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<DateTime?>("LastLogin")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(64)
+                        .HasColumnType("varchar(64)");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(32)
+                        .HasColumnType("varchar(32)");
 
                     b.HasKey("Id");
 
@@ -232,35 +235,34 @@ namespace RYHME.Migrations
                     b.Navigation("Artist");
                 });
 
+            modelBuilder.Entity("RYHME.Models.Artist", b =>
+                {
+                    b.HasOne("RYHME.Models.User", "Manager")
+                        .WithMany("Artists")
+                        .HasForeignKey("ManagerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Manager");
+                });
+
             modelBuilder.Entity("RYHME.Models.Release", b =>
                 {
                     b.HasOne("RYHME.Models.Album", "Album")
-                        .WithMany()
+                        .WithMany("Releases")
                         .HasForeignKey("AlbumId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("RYHME.Models.Album", null)
-                        .WithMany("Releases")
-                        .HasForeignKey("AlbumId1");
-
                     b.HasOne("RYHME.Models.User", "CreatedBy")
-                        .WithMany()
+                        .WithMany("Releases")
                         .HasForeignKey("CreatedByUserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("RYHME.Models.Song", "Song")
-                        .WithMany()
+                        .WithMany("Releases")
                         .HasForeignKey("SongId")
                         .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("RYHME.Models.Song", null)
-                        .WithMany("Releases")
-                        .HasForeignKey("SongId1");
-
-                    b.HasOne("RYHME.Models.User", null)
-                        .WithMany("Releases")
-                        .HasForeignKey("UserId");
 
                     b.Navigation("Album");
 
@@ -299,6 +301,8 @@ namespace RYHME.Migrations
 
             modelBuilder.Entity("RYHME.Models.User", b =>
                 {
+                    b.Navigation("Artists");
+
                     b.Navigation("Releases");
                 });
 #pragma warning restore 612, 618

@@ -31,11 +31,13 @@ namespace RYHME.view
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            int duration;
+            int.TryParse(durationTextBox.Text, out duration);
             var song = new Song
             {
                 Title = titleTextBox.Text,
                 AlbumId = (int)albumComboBox.SelectedValue,
-                Duration = TimeSpan.Parse(durationTextBox.Text)
+                Duration = duration
             };
             _songController.AddSong(song);
             LoadSongs();
@@ -45,11 +47,13 @@ namespace RYHME.view
         {
             if (songsDataGridView.SelectedRows.Count > 0)
             {
+                int duration;
+                int.TryParse(durationTextBox.Text, out duration);
                 var selectedRow = songsDataGridView.SelectedRows[0];
                 var song = (Song)selectedRow.DataBoundItem;
                 song.Title = titleTextBox.Text;
                 song.AlbumId = (int)albumComboBox.SelectedValue;
-                song.Duration = TimeSpan.Parse(durationTextBox.Text);
+                song.Duration = duration;
                 _songController.UpdateSong(song);
                 LoadSongs();
             }
