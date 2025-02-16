@@ -15,69 +15,145 @@ namespace RYHME.view
 
         private void InitializeComponent()
         {
-            this.idLabel = new System.Windows.Forms.Label();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.albumLabel = new System.Windows.Forms.Label();
-            this.durationLabel = new System.Windows.Forms.Label();
-            this.lyricsLabel = new System.Windows.Forms.Label();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.albumComboBox = new System.Windows.Forms.ComboBox();
-            this.durationTextBox = new System.Windows.Forms.TextBox();
-            this.lyricsTextBox = new System.Windows.Forms.TextBox();
-            this.addButton = new System.Windows.Forms.Button();
-            this.updateButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.songsDataGridView = new System.Windows.Forms.DataGridView();
-
-            this.Controls.Add(this.idLabel);
-            this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.albumLabel);
-            this.Controls.Add(this.durationLabel);
-            this.Controls.Add(this.lyricsLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.titleTextBox);
-            this.Controls.Add(this.albumComboBox);
-            this.Controls.Add(this.durationTextBox);
-            this.Controls.Add(this.lyricsTextBox);
-            this.Controls.Add(this.addButton);
-            this.Controls.Add(this.updateButton);
-            this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.searchTextBox);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.songsDataGridView);
-
-            this.idLabel.Text = "ID";
-            this.titleLabel.Text = "Title";
-            this.albumLabel.Text = "Album";
-            this.durationLabel.Text = "Duration";
-            this.lyricsLabel.Text = "Lyrics";
-
-            this.addButton.Text = "Add";
-            this.updateButton.Text = "Update";
-            this.deleteButton.Text = "Delete";
-            this.searchButton.Text = "Search";
-
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-
-            // Set control positions and sizes here
+            titleLabel = new Label();
+            albumLabel = new Label();
+            durationLabel = new Label();
+            titleTextBox = new TextBox();
+            albumComboBox = new ComboBox();
+            durationTextBox = new TextBox();
+            addButton = new Button();
+            updateButton = new Button();
+            deleteButton = new Button();
+            searchTextBox = new TextBox();
+            searchButton = new Button();
+            songsDataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)songsDataGridView).BeginInit();
+            SuspendLayout();
+            // 
+            // titleLabel
+            // 
+            titleLabel.Location = new Point(55, 60);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(45, 23);
+            titleLabel.TabIndex = 1;
+            titleLabel.Text = "Title";
+            // 
+            // albumLabel
+            // 
+            albumLabel.Location = new Point(377, 60);
+            albumLabel.Name = "albumLabel";
+            albumLabel.Size = new Size(73, 23);
+            albumLabel.TabIndex = 2;
+            albumLabel.Text = "Album";
+            // 
+            // durationLabel
+            // 
+            durationLabel.Location = new Point(55, 102);
+            durationLabel.Name = "durationLabel";
+            durationLabel.Size = new Size(90, 23);
+            durationLabel.TabIndex = 3;
+            durationLabel.Text = "Duration";
+            // 
+            // titleTextBox
+            // 
+            titleTextBox.Location = new Point(163, 52);
+            titleTextBox.Name = "titleTextBox";
+            titleTextBox.Size = new Size(141, 31);
+            titleTextBox.TabIndex = 6;
+            // 
+            // albumComboBox
+            // 
+            albumComboBox.Location = new Point(377, 94);
+            albumComboBox.Name = "albumComboBox";
+            albumComboBox.Size = new Size(141, 33);
+            albumComboBox.TabIndex = 7;
+            // 
+            // durationTextBox
+            // 
+            durationTextBox.Location = new Point(163, 94);
+            durationTextBox.Name = "durationTextBox";
+            durationTextBox.Size = new Size(142, 31);
+            durationTextBox.TabIndex = 8;
+            // 
+            // addButton
+            // 
+            addButton.Location = new Point(547, 151);
+            addButton.Name = "addButton";
+            addButton.Size = new Size(87, 32);
+            addButton.TabIndex = 10;
+            addButton.Text = "Add";
+            addButton.Click += addButton_Click;
+            // 
+            // updateButton
+            // 
+            updateButton.Location = new Point(640, 149);
+            updateButton.Name = "updateButton";
+            updateButton.Size = new Size(87, 34);
+            updateButton.TabIndex = 11;
+            updateButton.Text = "Update";
+            updateButton.Click += updateButton_Click;
+            // 
+            // deleteButton
+            // 
+            deleteButton.Location = new Point(733, 149);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(87, 33);
+            deleteButton.TabIndex = 12;
+            deleteButton.Text = "Delete";
+            deleteButton.Click += deleteButton_Click;
+            // 
+            // searchTextBox
+            // 
+            searchTextBox.Location = new Point(14, 149);
+            searchTextBox.Name = "searchTextBox";
+            searchTextBox.Size = new Size(338, 31);
+            searchTextBox.TabIndex = 13;
+            // 
+            // searchButton
+            // 
+            searchButton.Location = new Point(377, 150);
+            searchButton.Name = "searchButton";
+            searchButton.Size = new Size(78, 31);
+            searchButton.TabIndex = 14;
+            searchButton.Text = "Search";
+            searchButton.Click += searchButton_Click;
+            // 
+            // songsDataGridView
+            // 
+            songsDataGridView.ColumnHeadersHeight = 34;
+            songsDataGridView.Location = new Point(14, 188);
+            songsDataGridView.Name = "songsDataGridView";
+            songsDataGridView.RowHeadersWidth = 62;
+            songsDataGridView.Size = new Size(806, 184);
+            songsDataGridView.TabIndex = 15;
+            // 
+            // SongsForm
+            // 
+            ClientSize = new Size(832, 384);
+            Controls.Add(titleLabel);
+            Controls.Add(albumLabel);
+            Controls.Add(durationLabel);
+            Controls.Add(titleTextBox);
+            Controls.Add(albumComboBox);
+            Controls.Add(durationTextBox);
+            Controls.Add(addButton);
+            Controls.Add(updateButton);
+            Controls.Add(deleteButton);
+            Controls.Add(searchTextBox);
+            Controls.Add(searchButton);
+            Controls.Add(songsDataGridView);
+            Name = "SongsForm";
+            ((System.ComponentModel.ISupportInitialize)songsDataGridView).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
-        private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label albumLabel;
         private System.Windows.Forms.Label durationLabel;
-        private System.Windows.Forms.Label lyricsLabel;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.ComboBox albumComboBox;
         private System.Windows.Forms.TextBox durationTextBox;
-        private System.Windows.Forms.TextBox lyricsTextBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button deleteButton;
