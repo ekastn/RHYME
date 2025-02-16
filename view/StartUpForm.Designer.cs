@@ -41,17 +41,20 @@
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 450);
+            pictureBox1.Size = new Size(800, 430);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // progressBar1
             // 
             progressBar1.Dock = DockStyle.Bottom;
-            progressBar1.Location = new Point(0, 421);
+            progressBar1.Location = new Point(0, 394);
+            progressBar1.Margin = new Padding(4);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(800, 29);
+            progressBar1.Size = new Size(800, 36);
             progressBar1.TabIndex = 1;
             // 
             // timer1
@@ -61,13 +64,15 @@
             // 
             // StartUpForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 430);
             Controls.Add(progressBar1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4);
             Name = "StartUpForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "StartUpForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

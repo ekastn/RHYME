@@ -38,45 +38,45 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(69, 161);
+            txtUsername.Location = new Point(279, 140);
             txtUsername.Margin = new Padding(4, 5, 4, 5);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(364, 31);
+            txtUsername.Size = new Size(191, 31);
             txtUsername.TabIndex = 1;
-            txtUsername.Text = "username";
+            txtUsername.Text = "Username";
             // 
             // txtNama
             // 
-            txtNama.Location = new Point(69, 109);
+            txtNama.Location = new Point(501, 140);
             txtNama.Margin = new Padding(4, 5, 4, 5);
             txtNama.Name = "txtNama";
-            txtNama.Size = new Size(364, 31);
+            txtNama.Size = new Size(202, 31);
             txtNama.TabIndex = 3;
-            txtNama.Text = "nama";
+            txtNama.Text = "Contact";
             txtNama.TextChanged += txtNama_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(69, 221);
+            txtPassword.Location = new Point(279, 208);
             txtPassword.Margin = new Padding(4, 5, 4, 5);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(364, 31);
+            txtPassword.Size = new Size(191, 31);
             txtPassword.TabIndex = 4;
             txtPassword.Text = "Password";
             // 
             // txtRePassword
             // 
-            txtRePassword.Location = new Point(69, 285);
+            txtRePassword.Location = new Point(501, 208);
             txtRePassword.Margin = new Padding(4, 5, 4, 5);
             txtRePassword.Name = "txtRePassword";
-            txtRePassword.Size = new Size(364, 31);
+            txtRePassword.Size = new Size(202, 31);
             txtRePassword.TabIndex = 5;
             txtRePassword.Text = "Re-Password";
             // 
             // btnRegister
             // 
             btnRegister.BackColor = SystemColors.AppWorkspace;
-            btnRegister.Location = new Point(189, 359);
+            btnRegister.Location = new Point(582, 275);
             btnRegister.Margin = new Padding(4, 5, 4, 5);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(121, 38);
@@ -98,13 +98,16 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(512, 479);
+            BackgroundImage = Properties.Resources.loginRegis;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(740, 400);
             Controls.Add(label1);
             Controls.Add(btnRegister);
             Controls.Add(txtRePassword);
             Controls.Add(txtPassword);
             Controls.Add(txtNama);
             Controls.Add(txtUsername);
+            DoubleBuffered = true;
             Name = "RegisterForm";
             Text = "RegisterForm";
             ResumeLayout(false);
