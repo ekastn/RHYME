@@ -167,6 +167,7 @@
             Name = "MainForm";
             RightToLeft = RightToLeft.No;
             Text = "RHYME";
+            FormClosing += MainForm_FormClosing;
             panelNavigation.ResumeLayout(false);
             panelNavigation.PerformLayout();
             ResumeLayout(false);

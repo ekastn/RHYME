@@ -1,6 +1,8 @@
 using System;
+using System.Text;
 using System.Windows.Forms;
 using RYHME.Controllers;
+using RYHME.view;
 
 namespace RYHME
 {
@@ -14,6 +16,11 @@ namespace RYHME
             InitializeComponent();
         }
 
+        private string HashPassword(string password)
+        {
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(password));
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -25,7 +32,7 @@ namespace RYHME
                 return;
             }
 
-            var user = _userController.AuthenticateUser(username, password);
+            var user = _userController.AuthenticateUser(username, HashPassword(password));
             if (user != null)
             {
                 Close();
@@ -39,6 +46,13 @@ namespace RYHME
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm form = new RegisterForm(_userController);
+            form.Show();
+            this.Hide();
         }
     }
 }

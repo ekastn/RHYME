@@ -56,5 +56,10 @@ namespace RYHME
         {
             OpenChildForm(new ReleasesForm(_releaseController));
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

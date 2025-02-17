@@ -25,29 +25,29 @@ namespace RYHME
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(456, 147);
-            txtUsername.Margin = new Padding(4, 5, 4, 5);
+            txtUsername.Location = new Point(365, 118);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(284, 31);
+            txtUsername.Size = new Size(228, 27);
             txtUsername.TabIndex = 0;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(456, 214);
-            txtPassword.Margin = new Padding(4, 5, 4, 5);
+            txtPassword.Location = new Point(365, 171);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(284, 31);
+            txtPassword.Size = new Size(228, 27);
             txtPassword.TabIndex = 1;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
             btnLogin.BackColor = Color.Transparent;
-            btnLogin.Location = new Point(535, 270);
-            btnLogin.Margin = new Padding(4, 5, 4, 5);
+            btnLogin.Location = new Point(428, 216);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(140, 38);
+            btnLogin.Size = new Size(112, 30);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -56,20 +56,18 @@ namespace RYHME
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(313, 153);
-            lblUsername.Margin = new Padding(4, 0, 4, 0);
+            lblUsername.Location = new Point(250, 122);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(91, 25);
+            lblUsername.Size = new Size(75, 20);
             lblUsername.TabIndex = 4;
             lblUsername.Text = "Username";
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(313, 220);
-            lblPassword.Margin = new Padding(4, 0, 4, 0);
+            lblPassword.Location = new Point(250, 176);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(87, 25);
+            lblPassword.Size = new Size(70, 20);
             lblPassword.TabIndex = 5;
             lblPassword.Text = "Password";
             // 
@@ -78,20 +76,20 @@ namespace RYHME
             labelRegister.AutoSize = true;
             labelRegister.BackColor = Color.Transparent;
             labelRegister.ForeColor = SystemColors.ButtonHighlight;
-            labelRegister.Location = new Point(569, 326);
-            labelRegister.Margin = new Padding(4, 0, 4, 0);
+            labelRegister.Location = new Point(455, 261);
             labelRegister.Name = "labelRegister";
-            labelRegister.Size = new Size(75, 25);
+            labelRegister.Size = new Size(63, 20);
             labelRegister.TabIndex = 6;
             labelRegister.Text = "Register";
+            labelRegister.Click += labelRegister_Click;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.loginRegis;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(778, 374);
+            ClientSize = new Size(622, 299);
             Controls.Add(labelRegister);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
@@ -99,8 +97,9 @@ namespace RYHME
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             DoubleBuffered = true;
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
