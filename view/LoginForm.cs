@@ -33,6 +33,7 @@ namespace RYHME
             }
 
             var user = _userController.AuthenticateUser(username, HashPassword(password));
+
             if (user != null)
             {
                 Close();

@@ -18,6 +18,14 @@ namespace RYHME.view
         {
             var artists = _artistController.GetAllArtists();
             artistsDataGridView.DataSource = artists;
+            CleanForm();
+        }
+
+        private void CleanForm()
+        {
+            nameTextBox.Text = "";
+            genreTextBox.Text = "";
+            contactTextBox.Text = "";
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -26,7 +34,8 @@ namespace RYHME.view
             {
                 Name = nameTextBox.Text,
                 Genre = genreTextBox.Text,
-                Contact = contactTextBox.Text
+                Contact = contactTextBox.Text,
+                ManagerId = 1 // FIXME: Hardcoded manager ID
             };
             _artistController.AddArtist(artist);
             LoadArtists();
