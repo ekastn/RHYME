@@ -46,5 +46,10 @@ namespace RYHME.Controllers
                 _context.SaveChanges();
             }
         }
+
+        public int GetUpcoamingReleasesCount()
+        {
+            return _context.Releases.Count(r => r.ScheduledDate > DateTime.Now);
+        }
     }
 }

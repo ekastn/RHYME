@@ -45,7 +45,7 @@ namespace RYHME
 
         private void buttonNavDashboard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DashboardForm(_artistController, _albumController, _songController));
+            OpenChildForm(new DashboardForm(_artistController, _albumController, _songController, _releaseController));
         }
 
         private void buttonNavArtists_Click(object sender, EventArgs e)
@@ -76,6 +76,11 @@ namespace RYHME
         private void button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            OpenChildForm(new DashboardForm(_artistController, _albumController, _songController, _releaseController));
         }
     }
 }

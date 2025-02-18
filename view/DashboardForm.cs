@@ -10,12 +10,14 @@ namespace RYHME
         private readonly ArtistController _artistController;
         private readonly AlbumController _albumController;
         private readonly SongController _songController;
+        private readonly ReleaseController _releaseController;
 
-        public DashboardForm(ArtistController artistController, AlbumController albumController, SongController songController)
+        public DashboardForm(ArtistController artistController, AlbumController albumController, SongController songController, ReleaseController releaseController)
         {
             _artistController = artistController;
             _albumController = albumController;
             _songController = songController;
+            _releaseController = releaseController;
             InitializeComponent();
         }
 
@@ -29,7 +31,7 @@ namespace RYHME
             var totalArtists = _artistController.GetAllArtists().Count;
             var totalAlbums = _albumController.GetAllAlbums().Count;
             var totalSongs = _songController.GetAllSongs().Count;
-            var upcomingReleases = 3; // Placeholder for actual logic
+            var upcomingReleases = _releaseController.GetUpcoamingReleasesCount();
 
             lblTotalArtists.Text = $"Total Artists: {totalArtists}";
             lblTotalAlbums.Text = $"Total Albums: {totalAlbums}";

@@ -50,8 +50,9 @@
             panelNavigation.Controls.Add(buttonNavDashboard);
             panelNavigation.Dock = DockStyle.Left;
             panelNavigation.Location = new Point(0, 0);
+            panelNavigation.Margin = new Padding(4);
             panelNavigation.Name = "panelNavigation";
-            panelNavigation.Size = new Size(190, 563);
+            panelNavigation.Size = new Size(238, 704);
             panelNavigation.TabIndex = 0;
             // 
             // buttonNavSongs
@@ -61,10 +62,11 @@
             buttonNavSongs.FlatStyle = FlatStyle.Flat;
             buttonNavSongs.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonNavSongs.ForeColor = Color.White;
-            buttonNavSongs.Location = new Point(0, 261);
+            buttonNavSongs.Location = new Point(0, 326);
+            buttonNavSongs.Margin = new Padding(4);
             buttonNavSongs.Name = "buttonNavSongs";
-            buttonNavSongs.Padding = new Padding(12, 0, 0, 0);
-            buttonNavSongs.Size = new Size(190, 40);
+            buttonNavSongs.Padding = new Padding(15, 0, 0, 0);
+            buttonNavSongs.Size = new Size(238, 50);
             buttonNavSongs.TabIndex = 3;
             buttonNavSongs.Text = "Songs";
             buttonNavSongs.TextAlign = ContentAlignment.MiddleLeft;
@@ -78,10 +80,11 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 523);
+            button5.Location = new Point(0, 654);
+            button5.Margin = new Padding(4);
             button5.Name = "button5";
-            button5.Padding = new Padding(12, 0, 0, 0);
-            button5.Size = new Size(190, 40);
+            button5.Padding = new Padding(15, 0, 0, 0);
+            button5.Size = new Size(238, 50);
             button5.TabIndex = 2;
             button5.Text = "Logout";
             button5.TextAlign = ContentAlignment.MiddleLeft;
@@ -95,10 +98,11 @@
             buttonNavReleases.FlatStyle = FlatStyle.Flat;
             buttonNavReleases.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonNavReleases.ForeColor = Color.White;
-            buttonNavReleases.Location = new Point(3, 210);
+            buttonNavReleases.Location = new Point(4, 262);
+            buttonNavReleases.Margin = new Padding(4);
             buttonNavReleases.Name = "buttonNavReleases";
-            buttonNavReleases.Padding = new Padding(12, 0, 0, 0);
-            buttonNavReleases.Size = new Size(190, 40);
+            buttonNavReleases.Padding = new Padding(15, 0, 0, 0);
+            buttonNavReleases.Size = new Size(238, 50);
             buttonNavReleases.TabIndex = 1;
             buttonNavReleases.Text = "Releases";
             buttonNavReleases.TextAlign = ContentAlignment.MiddleLeft;
@@ -112,10 +116,11 @@
             buttonNavAlbums.FlatStyle = FlatStyle.Flat;
             buttonNavAlbums.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonNavAlbums.ForeColor = Color.White;
-            buttonNavAlbums.Location = new Point(3, 169);
+            buttonNavAlbums.Location = new Point(4, 211);
+            buttonNavAlbums.Margin = new Padding(4);
             buttonNavAlbums.Name = "buttonNavAlbums";
-            buttonNavAlbums.Padding = new Padding(12, 0, 0, 0);
-            buttonNavAlbums.Size = new Size(190, 40);
+            buttonNavAlbums.Padding = new Padding(15, 0, 0, 0);
+            buttonNavAlbums.Size = new Size(238, 50);
             buttonNavAlbums.TabIndex = 1;
             buttonNavAlbums.Text = "Albums";
             buttonNavAlbums.TextAlign = ContentAlignment.MiddleLeft;
@@ -129,10 +134,11 @@
             buttonNavArtists.FlatStyle = FlatStyle.Flat;
             buttonNavArtists.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonNavArtists.ForeColor = Color.White;
-            buttonNavArtists.Location = new Point(3, 128);
+            buttonNavArtists.Location = new Point(4, 160);
+            buttonNavArtists.Margin = new Padding(4);
             buttonNavArtists.Name = "buttonNavArtists";
-            buttonNavArtists.Padding = new Padding(12, 0, 0, 0);
-            buttonNavArtists.Size = new Size(190, 40);
+            buttonNavArtists.Padding = new Padding(15, 0, 0, 0);
+            buttonNavArtists.Size = new Size(238, 50);
             buttonNavArtists.TabIndex = 1;
             buttonNavArtists.Text = "Artists";
             buttonNavArtists.TextAlign = ContentAlignment.MiddleLeft;
@@ -146,10 +152,11 @@
             buttonNavDashboard.FlatStyle = FlatStyle.Flat;
             buttonNavDashboard.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonNavDashboard.ForeColor = Color.White;
-            buttonNavDashboard.Location = new Point(0, 87);
+            buttonNavDashboard.Location = new Point(0, 109);
+            buttonNavDashboard.Margin = new Padding(4);
             buttonNavDashboard.Name = "buttonNavDashboard";
-            buttonNavDashboard.Padding = new Padding(12, 0, 0, 0);
-            buttonNavDashboard.Size = new Size(190, 40);
+            buttonNavDashboard.Padding = new Padding(15, 0, 0, 0);
+            buttonNavDashboard.Size = new Size(238, 50);
             buttonNavDashboard.TabIndex = 1;
             buttonNavDashboard.Text = "Dashboard";
             buttonNavDashboard.TextAlign = ContentAlignment.MiddleLeft;
@@ -160,23 +167,25 @@
             // 
             panelChild.BackColor = SystemColors.GrayText;
             panelChild.Dock = DockStyle.Fill;
-            panelChild.Location = new Point(190, 0);
+            panelChild.Location = new Point(238, 0);
+            panelChild.Margin = new Padding(4);
             panelChild.Name = "panelChild";
-            panelChild.Size = new Size(833, 563);
+            panelChild.Size = new Size(1041, 704);
             panelChild.TabIndex = 1;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1023, 563);
+            ClientSize = new Size(1279, 704);
             Controls.Add(panelChild);
             Controls.Add(panelNavigation);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4);
             Name = "MainForm";
             RightToLeft = RightToLeft.No;
             Text = "RHYME";
             FormClosing += MainForm_FormClosing;
+            Load += MainForm_Load;
             panelNavigation.ResumeLayout(false);
             panelNavigation.PerformLayout();
             ResumeLayout(false);
