@@ -1,4 +1,5 @@
-﻿using RYHME.Controllers;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics.Internal;
+using RYHME.Controllers;
 using RYHME.Models;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,11 @@ namespace RYHME.view
     {
 
         private readonly UserController _userController;
+        private LoginForm _loginForm;
 
-        public RegisterForm(UserController userController)
+        public RegisterForm(UserController userController, LoginForm loginform)
         {
+            _loginForm = loginform;
             InitializeComponent();
             _userController = userController;
         }
@@ -56,8 +59,8 @@ namespace RYHME.view
             {
                 _userController.AddUser(newUser);
                 MessageBox.Show("User registered successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearForm();
                 Close();
+                _loginForm.Close();
             }
             catch (Exception ex)
             {

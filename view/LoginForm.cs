@@ -51,7 +51,7 @@ namespace RYHME
 
         private void labelRegister_Click(object sender, EventArgs e)
         {
-            RegisterForm form = new RegisterForm(_userController);
+            RegisterForm form = new RegisterForm(_userController, this);
             form.Show();
             this.Hide();
         }

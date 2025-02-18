@@ -72,5 +72,10 @@ namespace RYHME
         {
             OpenChildForm(new SongsForm(_songController, _albumController));
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
