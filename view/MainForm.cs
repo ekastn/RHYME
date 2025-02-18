@@ -10,13 +10,19 @@ namespace RYHME
         private readonly AlbumController _albumController;
         private readonly SongController _songController;
         private readonly ReleaseController _releaseController;
+        private readonly UserController _userController;
 
-        public MainForm(ArtistController artistController, AlbumController albumController, SongController songController, ReleaseController releaseController)
+        public MainForm(ArtistController artistController,
+            AlbumController albumController,
+            SongController songController,
+            ReleaseController releaseController,
+            UserController userController)
         {
             _artistController = artistController;
             _albumController = albumController;
             _songController = songController;
             _releaseController = releaseController;
+            _userController = userController;
             InitializeComponent();
         }
 
@@ -54,12 +60,17 @@ namespace RYHME
 
         private void buttonNavReleases_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ReleasesForm(_releaseController));
+            OpenChildForm(new ReleasesForm(_releaseController, _albumController, _songController));
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonNavSongs_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SongsForm(_songController, _albumController));
         }
     }
 }

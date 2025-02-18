@@ -13,6 +13,8 @@ namespace RYHME.view
             _songController = songController;
             _albumController = albumController;
             InitializeComponent();
+            LoadSongs();
+            LoadAlbums();
         }
 
         private void LoadSongs()

@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             panelNavigation = new Panel();
+            buttonNavSongs = new Button();
             button5 = new Button();
             buttonNavReleases = new Button();
             buttonNavAlbums = new Button();
             buttonNavArtists = new Button();
             buttonNavDashboard = new Button();
             panelChild = new Panel();
-            panelTop = new Panel();
             panelNavigation.SuspendLayout();
             SuspendLayout();
             // 
             // panelNavigation
             // 
             panelNavigation.BackColor = Color.Black;
+            panelNavigation.Controls.Add(buttonNavSongs);
             panelNavigation.Controls.Add(button5);
             panelNavigation.Controls.Add(buttonNavReleases);
             panelNavigation.Controls.Add(buttonNavAlbums);
@@ -52,6 +53,23 @@
             panelNavigation.Name = "panelNavigation";
             panelNavigation.Size = new Size(190, 563);
             panelNavigation.TabIndex = 0;
+            // 
+            // buttonNavSongs
+            // 
+            buttonNavSongs.AutoSize = true;
+            buttonNavSongs.FlatAppearance.BorderSize = 0;
+            buttonNavSongs.FlatStyle = FlatStyle.Flat;
+            buttonNavSongs.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonNavSongs.ForeColor = Color.White;
+            buttonNavSongs.Location = new Point(0, 261);
+            buttonNavSongs.Name = "buttonNavSongs";
+            buttonNavSongs.Padding = new Padding(12, 0, 0, 0);
+            buttonNavSongs.Size = new Size(190, 40);
+            buttonNavSongs.TabIndex = 3;
+            buttonNavSongs.Text = "Songs";
+            buttonNavSongs.TextAlign = ContentAlignment.MiddleLeft;
+            buttonNavSongs.UseVisualStyleBackColor = true;
+            buttonNavSongs.Click += buttonNavSongs_Click;
             // 
             // button5
             // 
@@ -140,27 +158,17 @@
             // panelChild
             // 
             panelChild.BackColor = SystemColors.GrayText;
-            panelChild.Dock = DockStyle.Bottom;
-            panelChild.Location = new Point(190, 49);
+            panelChild.Dock = DockStyle.Fill;
+            panelChild.Location = new Point(190, 0);
             panelChild.Name = "panelChild";
-            panelChild.Size = new Size(733, 514);
+            panelChild.Size = new Size(833, 563);
             panelChild.TabIndex = 1;
-            // 
-            // panelTop
-            // 
-            panelTop.BackColor = SystemColors.ActiveCaption;
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(190, 0);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(733, 51);
-            panelTop.TabIndex = 2;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(923, 563);
-            Controls.Add(panelTop);
+            ClientSize = new Size(1023, 563);
             Controls.Add(panelChild);
             Controls.Add(panelNavigation);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -181,7 +189,7 @@
         private Button buttonNavAlbums;
         private Button buttonNavArtists;
         private Panel panelChild;
-        private Panel panelTop;
         private Button button5;
+        private Button buttonNavSongs;
     }
 }

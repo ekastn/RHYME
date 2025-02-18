@@ -9,10 +9,6 @@ public class Release
     public int Id { get; set; }
 
     [Required]
-    [MaxLength(100)]
-    public string Title { get; set; }
-
-    [Required]
     public ReleaseType Type { get; set; }  // Single or Album
 
     public int? AlbumId { get; set; }      // Null for singles

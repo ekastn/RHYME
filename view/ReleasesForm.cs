@@ -1,16 +1,31 @@
 using RYHME.Controllers;
 using RYHME.Models;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace RYHME.view
 {
     public partial class ReleasesForm : Form
     {
         private readonly ReleaseController _releaseController;
+        private readonly AlbumController _albumController;
+        private readonly SongController _songController;
 
-        public ReleasesForm(ReleaseController releaseController)
+        private List<Album> _albums;
+        private List<Song> _songs;
+
+        public ReleasesForm(ReleaseController releaseController,
+            AlbumController albumController,
+            SongController songController)
         {
             _releaseController = releaseController;
+            _albumController = albumController;
+            _songController = songController;
+
             InitializeComponent();
+            LoadReleases();
+            LoadAlbumsAndSongs();
         }
 
         private void LoadReleases()
@@ -19,27 +34,80 @@ namespace RYHME.view
             releasesDataGridView.DataSource = releases;
         }
 
+        private void LoadAlbumsAndSongs()
+        {
+            _albums = _albumController.GetAllAlbums();
+            _songs = _songController.GetAllSongs();
+            albumOrSongComboBox.Items.Clear();
+            albumOrSongComboBox.Items.AddRange(_albums.ToArray());
+            albumOrSongComboBox.Items.AddRange(_songs.ToArray());
+            albumOrSongComboBox.DisplayMember = "Title";
+            albumOrSongComboBox.ValueMember = "Id";
+        }
+
+        private void DisplayAlbums()
+        {
+            albumOrSongComboBox.Items.Clear();
+            albumOrSongComboBox.Items.AddRange(_albums.ToArray());
+            albumOrSongComboBox.DisplayMember = "Title";
+            albumOrSongComboBox.ValueMember = "Id";
+        }
+
+        private void DisplaySongs()
+        {
+            albumOrSongComboBox.Items.Clear();
+            albumOrSongComboBox.Items.AddRange(_songs.ToArray());
+            albumOrSongComboBox.DisplayMember = "Title";
+            albumOrSongComboBox.ValueMember = "Id";
+        }
+
         private void addReleaseButton_Click(object sender, EventArgs e)
         {
-            var release = new Release
+
+            Album? album = null;
+            Song? song = null;
+
+            if (typeComboBox.SelectedItem.ToString() == "Album")
             {
-                Title = albumOrSongComboBox.Text,
-                ScheduledDate = releaseDatePicker.Value,
-                Status = (ReleaseStatus)statusComboBox.SelectedItem
-            };
-            _releaseController.AddRelease(release);
-            LoadReleases();
+                album = (Album?)albumOrSongComboBox.SelectedItem;
+            }
+            else if (typeComboBox.SelectedItem.ToString() == "Single")
+            {
+                song = (Song?)albumOrSongComboBox.SelectedItem;
+            }
+
+            if (ValidateRelease())
+            {
+                var release = new Release
+                {
+                    CreatedByUserId = 1,
+                    Type = (ReleaseType)typeComboBox.SelectedItem,
+                    AlbumId = album?.Id,
+                    SongId = song?.Id,
+                    Status = (ReleaseStatus)statusComboBox.SelectedItem,
+                    ScheduledDate = releaseDatePicker.Value,
+                    Notes = notesTextBox.Text
+                };
+
+                _releaseController.AddRelease(release);
+
+                LoadReleases();
+            }
         }
 
         private void updateReleaseButton_Click(object sender, EventArgs e)
         {
-            if (releasesDataGridView.SelectedRows.Count > 0)
+            if (releasesDataGridView.SelectedRows.Count > 0 && ValidateRelease())
             {
                 var selectedRow = releasesDataGridView.SelectedRows[0];
                 var release = (Release)selectedRow.DataBoundItem;
-                release.Title = albumOrSongComboBox.Text;
-                release.ScheduledDate = releaseDatePicker.Value;
+                release.Type = (ReleaseType)typeComboBox.SelectedItem;
+                release.AlbumId = typeComboBox.SelectedItem.ToString() == "Album" ? (int?)albumOrSongComboBox.SelectedItem : null;
+                release.SongId = typeComboBox.SelectedItem.ToString() == "Single" ? (int?)albumOrSongComboBox.SelectedItem : null;
                 release.Status = (ReleaseStatus)statusComboBox.SelectedItem;
+                release.ReleaseDate = releaseDatePicker.Value;
+                release.Notes = notesTextBox.Text;
+                release.UpdatedAt = DateTime.Now;
                 _releaseController.UpdateRelease(release);
                 LoadReleases();
             }
@@ -55,5 +123,49 @@ namespace RYHME.view
                 LoadReleases();
             }
         }
+
+        private bool ValidateRelease()
+        {
+            if (typeComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Type is required.");
+                return false;
+            }
+
+            if (statusComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Status is required.");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void ReleasesForm_Load(object sender, EventArgs e)
+        {
+            statusComboBox.DataSource = Enum.GetValues(typeof(ReleaseStatus));
+            typeComboBox.DataSource = Enum.GetValues(typeof(ReleaseType));
+        }
+
+        private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (typeComboBox.SelectedItem.ToString() == "Album")
+            {
+                DisplayAlbums();
+            }
+            DisplaySongs();
+        }
+
+        private void typeComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (typeComboBox.SelectedItem.ToString() == "Album")
+            {
+                DisplayAlbums();
+            }
+            DisplaySongs();
+
+        }
     }
 }
+
+

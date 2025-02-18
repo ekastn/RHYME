@@ -1,3 +1,5 @@
+using RYHME.Models;
+
 namespace RYHME.view
 {
     partial class ReleasesForm
@@ -28,6 +30,10 @@ namespace RYHME.view
             refreshButton = new Button();
             searchButton = new Button();
             searchTextBox = new TextBox();
+            typeLabel = new Label();
+            typeComboBox = new ComboBox();
+            notesLabel = new Label();
+            notesTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)releasesDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -59,21 +65,22 @@ namespace RYHME.view
             // 
             albumOrSongComboBox.Location = new Point(127, 133);
             albumOrSongComboBox.Name = "albumOrSongComboBox";
-            albumOrSongComboBox.Size = new Size(309, 33);
+            albumOrSongComboBox.Size = new Size(309, 28);
             albumOrSongComboBox.TabIndex = 3;
             // 
             // releaseDatePicker
             // 
             releaseDatePicker.Location = new Point(127, 76);
             releaseDatePicker.Name = "releaseDatePicker";
-            releaseDatePicker.Size = new Size(309, 31);
+            releaseDatePicker.Size = new Size(309, 27);
             releaseDatePicker.TabIndex = 4;
             // 
             // statusComboBox
             // 
+            statusComboBox.Items.AddRange(new object[] { ReleaseStatus.Draft, ReleaseStatus.Scheduled, ReleaseStatus.Released, ReleaseStatus.Cancelled });
             statusComboBox.Location = new Point(127, 22);
             statusComboBox.Name = "statusComboBox";
-            statusComboBox.Size = new Size(309, 33);
+            statusComboBox.Size = new Size(309, 28);
             statusComboBox.TabIndex = 5;
             // 
             // addReleaseButton
@@ -106,10 +113,10 @@ namespace RYHME.view
             // releasesDataGridView
             // 
             releasesDataGridView.ColumnHeadersHeight = 34;
-            releasesDataGridView.Location = new Point(12, 237);
+            releasesDataGridView.Location = new Point(12, 282);
             releasesDataGridView.Name = "releasesDataGridView";
             releasesDataGridView.RowHeadersWidth = 62;
-            releasesDataGridView.Size = new Size(801, 208);
+            releasesDataGridView.Size = new Size(801, 163);
             releasesDataGridView.TabIndex = 9;
             // 
             // refreshButton
@@ -122,7 +129,7 @@ namespace RYHME.view
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(311, 200);
+            searchButton.Location = new Point(725, 231);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(78, 34);
             searchButton.TabIndex = 16;
@@ -130,14 +137,51 @@ namespace RYHME.view
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(12, 200);
+            searchTextBox.Location = new Point(470, 235);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(239, 31);
+            searchTextBox.Size = new Size(239, 27);
             searchTextBox.TabIndex = 17;
+            // 
+            // typeLabel
+            // 
+            typeLabel.Location = new Point(21, 184);
+            typeLabel.Name = "typeLabel";
+            typeLabel.Size = new Size(100, 23);
+            typeLabel.TabIndex = 18;
+            typeLabel.Text = "Type";
+            // 
+            // typeComboBox
+            // 
+            typeComboBox.Items.AddRange(new object[] { ReleaseType.Single, ReleaseType.Album });
+            typeComboBox.Location = new Point(127, 184);
+            typeComboBox.Name = "typeComboBox";
+            typeComboBox.Size = new Size(309, 28);
+            typeComboBox.TabIndex = 19;
+            typeComboBox.SelectedIndexChanged += typeComboBox_SelectedIndexChanged;
+            typeComboBox.SelectedValueChanged += typeComboBox_SelectedValueChanged;
+            // 
+            // notesLabel
+            // 
+            notesLabel.Location = new Point(21, 235);
+            notesLabel.Name = "notesLabel";
+            notesLabel.Size = new Size(100, 23);
+            notesLabel.TabIndex = 20;
+            notesLabel.Text = "Notes";
+            // 
+            // notesTextBox
+            // 
+            notesTextBox.Location = new Point(127, 235);
+            notesTextBox.Name = "notesTextBox";
+            notesTextBox.Size = new Size(309, 27);
+            notesTextBox.TabIndex = 21;
             // 
             // ReleasesForm
             // 
             ClientSize = new Size(825, 457);
+            Controls.Add(notesTextBox);
+            Controls.Add(notesLabel);
+            Controls.Add(typeComboBox);
+            Controls.Add(typeLabel);
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
             Controls.Add(refreshButton);
@@ -152,6 +196,7 @@ namespace RYHME.view
             Controls.Add(deleteReleaseButton);
             Controls.Add(releasesDataGridView);
             Name = "ReleasesForm";
+            Load += ReleasesForm_Load;
             ((System.ComponentModel.ISupportInitialize)releasesDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -170,5 +215,10 @@ namespace RYHME.view
         private Button refreshButton;
         private Button searchButton;
         private TextBox searchTextBox;
+        private Label typeLabel;
+        private ComboBox typeComboBox;
+        private Label notesLabel;
+        private TextBox notesTextBox;
     }
 }
+
