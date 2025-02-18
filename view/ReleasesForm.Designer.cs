@@ -39,6 +39,7 @@ namespace RYHME.view
             // 
             // albumOrSongLabel
             // 
+            albumOrSongLabel.ForeColor = Color.White;
             albumOrSongLabel.Location = new Point(21, 133);
             albumOrSongLabel.Name = "albumOrSongLabel";
             albumOrSongLabel.Size = new Size(100, 23);
@@ -47,6 +48,7 @@ namespace RYHME.view
             // 
             // releaseDateLabel
             // 
+            releaseDateLabel.ForeColor = Color.White;
             releaseDateLabel.Location = new Point(21, 84);
             releaseDateLabel.Name = "releaseDateLabel";
             releaseDateLabel.Size = new Size(100, 23);
@@ -55,6 +57,7 @@ namespace RYHME.view
             // 
             // statusLabel
             // 
+            statusLabel.ForeColor = Color.White;
             statusLabel.Location = new Point(21, 32);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new Size(100, 23);
@@ -85,6 +88,7 @@ namespace RYHME.view
             // 
             // addReleaseButton
             // 
+            addReleaseButton.ForeColor = Color.White;
             addReleaseButton.Location = new Point(529, 114);
             addReleaseButton.Name = "addReleaseButton";
             addReleaseButton.Size = new Size(96, 31);
@@ -94,6 +98,7 @@ namespace RYHME.view
             // 
             // updateReleaseButton
             // 
+            updateReleaseButton.ForeColor = Color.White;
             updateReleaseButton.Location = new Point(666, 114);
             updateReleaseButton.Name = "updateReleaseButton";
             updateReleaseButton.Size = new Size(89, 31);
@@ -103,6 +108,7 @@ namespace RYHME.view
             // 
             // deleteReleaseButton
             // 
+            deleteReleaseButton.ForeColor = Color.White;
             deleteReleaseButton.Location = new Point(666, 52);
             deleteReleaseButton.Name = "deleteReleaseButton";
             deleteReleaseButton.Size = new Size(89, 33);
@@ -112,6 +118,7 @@ namespace RYHME.view
             // 
             // releasesDataGridView
             // 
+            releasesDataGridView.BackgroundColor = Color.White;
             releasesDataGridView.ColumnHeadersHeight = 34;
             releasesDataGridView.Location = new Point(12, 282);
             releasesDataGridView.Name = "releasesDataGridView";
@@ -121,6 +128,7 @@ namespace RYHME.view
             // 
             // exportButton
             // 
+            exportButton.ForeColor = Color.White;
             exportButton.Location = new Point(529, 52);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(96, 33);
@@ -130,6 +138,7 @@ namespace RYHME.view
             // 
             // searchButton
             // 
+            searchButton.ForeColor = Color.White;
             searchButton.Location = new Point(725, 231);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(78, 34);
@@ -145,6 +154,7 @@ namespace RYHME.view
             // 
             // typeLabel
             // 
+            typeLabel.ForeColor = Color.White;
             typeLabel.Location = new Point(21, 184);
             typeLabel.Name = "typeLabel";
             typeLabel.Size = new Size(100, 23);
@@ -163,6 +173,7 @@ namespace RYHME.view
             // 
             // notesLabel
             // 
+            notesLabel.ForeColor = Color.White;
             notesLabel.Location = new Point(21, 235);
             notesLabel.Name = "notesLabel";
             notesLabel.Size = new Size(100, 23);
@@ -178,6 +189,9 @@ namespace RYHME.view
             // 
             // ReleasesForm
             // 
+            BackColor = Color.FromArgb(28, 28, 28);
+            BackgroundImage = Properties.Resources.Desain_tanpa_judul;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(825, 457);
             Controls.Add(notesTextBox);
             Controls.Add(notesLabel);
@@ -196,6 +210,7 @@ namespace RYHME.view
             Controls.Add(updateReleaseButton);
             Controls.Add(deleteReleaseButton);
             Controls.Add(releasesDataGridView);
+            DoubleBuffered = true;
             Name = "ReleasesForm";
             Load += ReleasesForm_Load;
             ((System.ComponentModel.ISupportInitialize)releasesDataGridView).EndInit();

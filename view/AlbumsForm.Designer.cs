@@ -31,6 +31,7 @@ namespace RYHME.view
             // 
             // titleLabel
             // 
+            titleLabel.ForeColor = Color.White;
             titleLabel.Location = new Point(18, 41);
             titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
@@ -40,6 +41,7 @@ namespace RYHME.view
             // 
             // artistLabel
             // 
+            artistLabel.ForeColor = Color.White;
             artistLabel.Location = new Point(18, 97);
             artistLabel.Margin = new Padding(2, 0, 2, 0);
             artistLabel.Name = "artistLabel";
@@ -65,7 +67,8 @@ namespace RYHME.view
             // 
             // addButton
             // 
-            addButton.Location = new Point(553, 47);
+            addButton.ForeColor = SystemColors.ButtonHighlight;
+            addButton.Location = new Point(749, 44);
             addButton.Margin = new Padding(2);
             addButton.Name = "addButton";
             addButton.Size = new Size(70, 29);
@@ -75,7 +78,8 @@ namespace RYHME.view
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(439, 94);
+            updateButton.ForeColor = SystemColors.ButtonHighlight;
+            updateButton.Location = new Point(635, 91);
             updateButton.Margin = new Padding(2);
             updateButton.Name = "updateButton";
             updateButton.Size = new Size(69, 29);
@@ -85,7 +89,8 @@ namespace RYHME.view
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(553, 94);
+            deleteButton.ForeColor = SystemColors.ButtonHighlight;
+            deleteButton.Location = new Point(749, 91);
             deleteButton.Margin = new Padding(2);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(70, 29);
@@ -95,7 +100,7 @@ namespace RYHME.view
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(319, 181);
+            searchTextBox.Location = new Point(515, 178);
             searchTextBox.Margin = new Padding(2);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(218, 27);
@@ -103,7 +108,8 @@ namespace RYHME.view
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(552, 180);
+            searchButton.ForeColor = SystemColors.ButtonHighlight;
+            searchButton.Location = new Point(748, 177);
             searchButton.Margin = new Padding(2);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(70, 26);
@@ -113,17 +119,19 @@ namespace RYHME.view
             // 
             // albumsDataGridView
             // 
+            albumsDataGridView.BackgroundColor = SystemColors.ButtonHighlight;
             albumsDataGridView.ColumnHeadersHeight = 34;
-            albumsDataGridView.Location = new Point(10, 221);
+            albumsDataGridView.Location = new Point(11, 227);
             albumsDataGridView.Margin = new Padding(2);
             albumsDataGridView.Name = "albumsDataGridView";
             albumsDataGridView.RowHeadersWidth = 62;
-            albumsDataGridView.Size = new Size(629, 176);
+            albumsDataGridView.Size = new Size(819, 233);
             albumsDataGridView.TabIndex = 17;
             // 
             // exportButton
             // 
-            exportButton.Location = new Point(440, 47);
+            exportButton.ForeColor = SystemColors.ButtonHighlight;
+            exportButton.Location = new Point(636, 44);
             exportButton.Margin = new Padding(2);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(67, 29);
@@ -135,7 +143,10 @@ namespace RYHME.view
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(648, 406);
+            BackColor = Color.FromArgb(28, 28, 28);
+            BackgroundImage = Properties.Resources.Desain_tanpa_judul;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(844, 471);
             Controls.Add(exportButton);
             Controls.Add(titleLabel);
             Controls.Add(artistLabel);
@@ -147,6 +158,7 @@ namespace RYHME.view
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
             Controls.Add(albumsDataGridView);
+            DoubleBuffered = true;
             Margin = new Padding(2);
             Name = "AlbumsForm";
             Text = "AlbumsForm";

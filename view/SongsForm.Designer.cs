@@ -33,6 +33,7 @@ namespace RYHME.view
             // 
             // titleLabel
             // 
+            titleLabel.ForeColor = Color.White;
             titleLabel.Location = new Point(55, 60);
             titleLabel.Name = "titleLabel";
             titleLabel.Size = new Size(45, 23);
@@ -41,7 +42,8 @@ namespace RYHME.view
             // 
             // albumLabel
             // 
-            albumLabel.Location = new Point(377, 60);
+            albumLabel.ForeColor = Color.White;
+            albumLabel.Location = new Point(55, 145);
             albumLabel.Name = "albumLabel";
             albumLabel.Size = new Size(73, 23);
             albumLabel.TabIndex = 2;
@@ -49,6 +51,7 @@ namespace RYHME.view
             // 
             // durationLabel
             // 
+            durationLabel.ForeColor = Color.White;
             durationLabel.Location = new Point(55, 102);
             durationLabel.Name = "durationLabel";
             durationLabel.Size = new Size(90, 23);
@@ -64,7 +67,7 @@ namespace RYHME.view
             // 
             // albumComboBox
             // 
-            albumComboBox.Location = new Point(377, 94);
+            albumComboBox.Location = new Point(163, 140);
             albumComboBox.Name = "albumComboBox";
             albumComboBox.Size = new Size(141, 28);
             albumComboBox.TabIndex = 7;
@@ -78,7 +81,8 @@ namespace RYHME.view
             // 
             // addButton
             // 
-            addButton.Location = new Point(640, 111);
+            addButton.ForeColor = Color.White;
+            addButton.Location = new Point(634, 54);
             addButton.Name = "addButton";
             addButton.Size = new Size(87, 32);
             addButton.TabIndex = 10;
@@ -87,7 +91,8 @@ namespace RYHME.view
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(640, 149);
+            updateButton.ForeColor = Color.White;
+            updateButton.Location = new Point(634, 92);
             updateButton.Name = "updateButton";
             updateButton.Size = new Size(87, 34);
             updateButton.TabIndex = 11;
@@ -96,7 +101,8 @@ namespace RYHME.view
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(733, 149);
+            deleteButton.ForeColor = Color.White;
+            deleteButton.Location = new Point(727, 92);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(87, 33);
             deleteButton.TabIndex = 12;
@@ -105,14 +111,15 @@ namespace RYHME.view
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(14, 149);
+            searchTextBox.Location = new Point(375, 191);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(338, 27);
             searchTextBox.TabIndex = 13;
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(377, 150);
+            searchButton.ForeColor = Color.White;
+            searchButton.Location = new Point(738, 192);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(78, 31);
             searchButton.TabIndex = 14;
@@ -121,16 +128,18 @@ namespace RYHME.view
             // 
             // songsDataGridView
             // 
+            songsDataGridView.BackgroundColor = Color.White;
             songsDataGridView.ColumnHeadersHeight = 34;
-            songsDataGridView.Location = new Point(14, 188);
+            songsDataGridView.Location = new Point(10, 229);
             songsDataGridView.Name = "songsDataGridView";
             songsDataGridView.RowHeadersWidth = 62;
-            songsDataGridView.Size = new Size(806, 184);
+            songsDataGridView.Size = new Size(806, 221);
             songsDataGridView.TabIndex = 15;
             // 
             // exportButton
             // 
-            exportButton.Location = new Point(733, 111);
+            exportButton.ForeColor = Color.White;
+            exportButton.Location = new Point(727, 54);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(87, 32);
             exportButton.TabIndex = 16;
@@ -139,7 +148,10 @@ namespace RYHME.view
             // 
             // SongsForm
             // 
-            ClientSize = new Size(832, 384);
+            BackColor = Color.FromArgb(28, 28, 28);
+            BackgroundImage = Properties.Resources.Desain_tanpa_judul;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(826, 462);
             Controls.Add(exportButton);
             Controls.Add(titleLabel);
             Controls.Add(albumLabel);
@@ -153,6 +165,7 @@ namespace RYHME.view
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
             Controls.Add(songsDataGridView);
+            DoubleBuffered = true;
             Name = "SongsForm";
             ((System.ComponentModel.ISupportInitialize)songsDataGridView).EndInit();
             ResumeLayout(false);

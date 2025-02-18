@@ -27,49 +27,50 @@ namespace RYHME
             // lblTotalArtists
             // 
             lblTotalArtists.AutoSize = true;
-            lblTotalArtists.Location = new Point(71, 83);
-            lblTotalArtists.Margin = new Padding(4, 0, 4, 0);
+            lblTotalArtists.ForeColor = Color.White;
+            lblTotalArtists.Location = new Point(57, 66);
             lblTotalArtists.Name = "lblTotalArtists";
-            lblTotalArtists.Size = new Size(108, 25);
+            lblTotalArtists.Size = new Size(90, 20);
             lblTotalArtists.TabIndex = 0;
             lblTotalArtists.Text = "Total Artists:";
             // 
             // lblTotalAlbums
             // 
             lblTotalAlbums.AutoSize = true;
-            lblTotalAlbums.Location = new Point(71, 167);
-            lblTotalAlbums.Margin = new Padding(4, 0, 4, 0);
+            lblTotalAlbums.ForeColor = Color.White;
+            lblTotalAlbums.Location = new Point(57, 134);
             lblTotalAlbums.Name = "lblTotalAlbums";
-            lblTotalAlbums.Size = new Size(119, 25);
+            lblTotalAlbums.Size = new Size(99, 20);
             lblTotalAlbums.TabIndex = 1;
             lblTotalAlbums.Text = "Total Albums:";
             // 
             // lblTotalSongs
             // 
             lblTotalSongs.AutoSize = true;
-            lblTotalSongs.Location = new Point(71, 250);
-            lblTotalSongs.Margin = new Padding(4, 0, 4, 0);
+            lblTotalSongs.ForeColor = Color.White;
+            lblTotalSongs.Location = new Point(57, 200);
             lblTotalSongs.Name = "lblTotalSongs";
-            lblTotalSongs.Size = new Size(108, 25);
+            lblTotalSongs.Size = new Size(89, 20);
             lblTotalSongs.TabIndex = 2;
             lblTotalSongs.Text = "Total Songs:";
             // 
             // lblUpcomingReleases
             // 
             lblUpcomingReleases.AutoSize = true;
-            lblUpcomingReleases.Location = new Point(71, 333);
-            lblUpcomingReleases.Margin = new Padding(4, 0, 4, 0);
+            lblUpcomingReleases.ForeColor = Color.White;
+            lblUpcomingReleases.Location = new Point(57, 266);
             lblUpcomingReleases.Name = "lblUpcomingReleases";
-            lblUpcomingReleases.Size = new Size(170, 25);
+            lblUpcomingReleases.Size = new Size(142, 20);
             lblUpcomingReleases.TabIndex = 3;
             lblUpcomingReleases.Text = "Upcoming Releases:";
             // 
             // btnAddArtist
             // 
-            btnAddArtist.Location = new Point(71, 417);
-            btnAddArtist.Margin = new Padding(4, 5, 4, 5);
+            btnAddArtist.ForeColor = Color.Black;
+            btnAddArtist.Location = new Point(57, 334);
+            btnAddArtist.Margin = new Padding(3, 4, 3, 4);
             btnAddArtist.Name = "btnAddArtist";
-            btnAddArtist.Size = new Size(143, 38);
+            btnAddArtist.Size = new Size(114, 30);
             btnAddArtist.TabIndex = 4;
             btnAddArtist.Text = "Add Artist";
             btnAddArtist.UseVisualStyleBackColor = true;
@@ -77,10 +78,11 @@ namespace RYHME
             // 
             // btnAddAlbum
             // 
-            btnAddAlbum.Location = new Point(286, 417);
-            btnAddAlbum.Margin = new Padding(4, 5, 4, 5);
+            btnAddAlbum.ForeColor = Color.Black;
+            btnAddAlbum.Location = new Point(229, 334);
+            btnAddAlbum.Margin = new Padding(3, 4, 3, 4);
             btnAddAlbum.Name = "btnAddAlbum";
-            btnAddAlbum.Size = new Size(143, 38);
+            btnAddAlbum.Size = new Size(114, 30);
             btnAddAlbum.TabIndex = 5;
             btnAddAlbum.Text = "Add Album";
             btnAddAlbum.UseVisualStyleBackColor = true;
@@ -88,10 +90,11 @@ namespace RYHME
             // 
             // btnAddSong
             // 
-            btnAddSong.Location = new Point(500, 417);
-            btnAddSong.Margin = new Padding(4, 5, 4, 5);
+            btnAddSong.ForeColor = Color.Black;
+            btnAddSong.Location = new Point(400, 334);
+            btnAddSong.Margin = new Padding(3, 4, 3, 4);
             btnAddSong.Name = "btnAddSong";
-            btnAddSong.Size = new Size(143, 38);
+            btnAddSong.Size = new Size(114, 30);
             btnAddSong.TabIndex = 6;
             btnAddSong.Text = "Add Song";
             btnAddSong.UseVisualStyleBackColor = true;
@@ -99,9 +102,12 @@ namespace RYHME
             // 
             // DashboardForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(802, 529);
+            BackColor = Color.FromArgb(28, 28, 28);
+            BackgroundImage = Properties.Resources.Desain_tanpa_judul;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(691, 441);
             Controls.Add(btnAddSong);
             Controls.Add(btnAddAlbum);
             Controls.Add(btnAddArtist);
@@ -109,7 +115,8 @@ namespace RYHME
             Controls.Add(lblTotalSongs);
             Controls.Add(lblTotalAlbums);
             Controls.Add(lblTotalArtists);
-            Margin = new Padding(4, 5, 4, 5);
+            DoubleBuffered = true;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "DashboardForm";
             Text = "Dashboard";
             Load += DashboardForm_Load;

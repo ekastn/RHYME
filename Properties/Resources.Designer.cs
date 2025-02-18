@@ -63,6 +63,16 @@ namespace RYHME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Desain_tanpa_judul {
+            get {
+                object obj = ResourceManager.GetObject("Desain_tanpa_judul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginRegis {
             get {
                 object obj = ResourceManager.GetObject("loginRegis", resourceCulture);
