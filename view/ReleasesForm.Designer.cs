@@ -40,7 +40,7 @@ namespace RYHME.view
             // albumOrSongLabel
             // 
             albumOrSongLabel.ForeColor = Color.White;
-            albumOrSongLabel.Location = new Point(21, 133);
+            albumOrSongLabel.Location = new Point(30, 155);
             albumOrSongLabel.Name = "albumOrSongLabel";
             albumOrSongLabel.Size = new Size(100, 23);
             albumOrSongLabel.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace RYHME.view
             // releaseDateLabel
             // 
             releaseDateLabel.ForeColor = Color.White;
-            releaseDateLabel.Location = new Point(21, 84);
+            releaseDateLabel.Location = new Point(30, 101);
             releaseDateLabel.Name = "releaseDateLabel";
             releaseDateLabel.Size = new Size(100, 23);
             releaseDateLabel.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace RYHME.view
             // statusLabel
             // 
             statusLabel.ForeColor = Color.White;
-            statusLabel.Location = new Point(21, 32);
+            statusLabel.Location = new Point(30, 49);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new Size(100, 23);
             statusLabel.TabIndex = 2;
@@ -66,30 +66,30 @@ namespace RYHME.view
             // 
             // albumOrSongComboBox
             // 
-            albumOrSongComboBox.Location = new Point(127, 133);
+            albumOrSongComboBox.Location = new Point(136, 150);
             albumOrSongComboBox.Name = "albumOrSongComboBox";
-            albumOrSongComboBox.Size = new Size(309, 28);
+            albumOrSongComboBox.Size = new Size(309, 33);
             albumOrSongComboBox.TabIndex = 3;
             // 
             // releaseDatePicker
             // 
-            releaseDatePicker.Location = new Point(127, 76);
+            releaseDatePicker.Location = new Point(136, 97);
             releaseDatePicker.Name = "releaseDatePicker";
-            releaseDatePicker.Size = new Size(309, 27);
+            releaseDatePicker.Size = new Size(309, 31);
             releaseDatePicker.TabIndex = 4;
             // 
             // statusComboBox
             // 
             statusComboBox.Items.AddRange(new object[] { ReleaseStatus.Draft, ReleaseStatus.Scheduled, ReleaseStatus.Released, ReleaseStatus.Cancelled });
-            statusComboBox.Location = new Point(127, 22);
+            statusComboBox.Location = new Point(136, 44);
             statusComboBox.Name = "statusComboBox";
-            statusComboBox.Size = new Size(309, 28);
+            statusComboBox.Size = new Size(309, 33);
             statusComboBox.TabIndex = 5;
             // 
             // addReleaseButton
             // 
             addReleaseButton.ForeColor = Color.White;
-            addReleaseButton.Location = new Point(529, 114);
+            addReleaseButton.Location = new Point(769, 279);
             addReleaseButton.Name = "addReleaseButton";
             addReleaseButton.Size = new Size(96, 31);
             addReleaseButton.TabIndex = 6;
@@ -99,7 +99,7 @@ namespace RYHME.view
             // updateReleaseButton
             // 
             updateReleaseButton.ForeColor = Color.White;
-            updateReleaseButton.Location = new Point(666, 114);
+            updateReleaseButton.Location = new Point(906, 279);
             updateReleaseButton.Name = "updateReleaseButton";
             updateReleaseButton.Size = new Size(89, 31);
             updateReleaseButton.TabIndex = 7;
@@ -109,7 +109,7 @@ namespace RYHME.view
             // deleteReleaseButton
             // 
             deleteReleaseButton.ForeColor = Color.White;
-            deleteReleaseButton.Location = new Point(666, 52);
+            deleteReleaseButton.Location = new Point(906, 217);
             deleteReleaseButton.Name = "deleteReleaseButton";
             deleteReleaseButton.Size = new Size(89, 33);
             deleteReleaseButton.TabIndex = 8;
@@ -120,16 +120,16 @@ namespace RYHME.view
             // 
             releasesDataGridView.BackgroundColor = Color.White;
             releasesDataGridView.ColumnHeadersHeight = 34;
-            releasesDataGridView.Location = new Point(12, 282);
+            releasesDataGridView.Location = new Point(21, 332);
             releasesDataGridView.Name = "releasesDataGridView";
             releasesDataGridView.RowHeadersWidth = 62;
-            releasesDataGridView.Size = new Size(801, 163);
+            releasesDataGridView.Size = new Size(974, 304);
             releasesDataGridView.TabIndex = 9;
             // 
             // exportButton
             // 
             exportButton.ForeColor = Color.White;
-            exportButton.Location = new Point(529, 52);
+            exportButton.Location = new Point(769, 217);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(96, 33);
             exportButton.TabIndex = 15;
@@ -139,7 +139,7 @@ namespace RYHME.view
             // searchButton
             // 
             searchButton.ForeColor = Color.White;
-            searchButton.Location = new Point(725, 231);
+            searchButton.Location = new Point(280, 275);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(78, 34);
             searchButton.TabIndex = 16;
@@ -147,15 +147,15 @@ namespace RYHME.view
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(470, 235);
+            searchTextBox.Location = new Point(25, 279);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(239, 27);
+            searchTextBox.Size = new Size(239, 31);
             searchTextBox.TabIndex = 17;
             // 
             // typeLabel
             // 
             typeLabel.ForeColor = Color.White;
-            typeLabel.Location = new Point(21, 184);
+            typeLabel.Location = new Point(537, 39);
             typeLabel.Name = "typeLabel";
             typeLabel.Size = new Size(100, 23);
             typeLabel.TabIndex = 18;
@@ -164,9 +164,9 @@ namespace RYHME.view
             // typeComboBox
             // 
             typeComboBox.Items.AddRange(new object[] { ReleaseType.Single, ReleaseType.Album });
-            typeComboBox.Location = new Point(127, 184);
+            typeComboBox.Location = new Point(643, 39);
             typeComboBox.Name = "typeComboBox";
-            typeComboBox.Size = new Size(309, 28);
+            typeComboBox.Size = new Size(309, 33);
             typeComboBox.TabIndex = 19;
             typeComboBox.SelectedIndexChanged += typeComboBox_SelectedIndexChanged;
             typeComboBox.SelectedValueChanged += typeComboBox_SelectedValueChanged;
@@ -174,7 +174,7 @@ namespace RYHME.view
             // notesLabel
             // 
             notesLabel.ForeColor = Color.White;
-            notesLabel.Location = new Point(21, 235);
+            notesLabel.Location = new Point(537, 90);
             notesLabel.Name = "notesLabel";
             notesLabel.Size = new Size(100, 23);
             notesLabel.TabIndex = 20;
@@ -182,9 +182,9 @@ namespace RYHME.view
             // 
             // notesTextBox
             // 
-            notesTextBox.Location = new Point(127, 235);
+            notesTextBox.Location = new Point(643, 90);
             notesTextBox.Name = "notesTextBox";
-            notesTextBox.Size = new Size(309, 27);
+            notesTextBox.Size = new Size(309, 31);
             notesTextBox.TabIndex = 21;
             // 
             // ReleasesForm
@@ -192,7 +192,7 @@ namespace RYHME.view
             BackColor = Color.FromArgb(28, 28, 28);
             BackgroundImage = Properties.Resources.Desain_tanpa_judul;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(825, 457);
+            ClientSize = new Size(1019, 648);
             Controls.Add(notesTextBox);
             Controls.Add(notesLabel);
             Controls.Add(typeComboBox);

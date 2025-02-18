@@ -153,6 +153,7 @@ namespace RYHME.view
             if (typeComboBox.SelectedItem.ToString() == "Album")
             {
                 DisplayAlbums();
+                return;
             }
             DisplaySongs();
         }
