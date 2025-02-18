@@ -1,5 +1,6 @@
 using RYHME.Controllers;
 using RYHME.Models;
+using RYHME.Utils;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -163,6 +164,34 @@ namespace RYHME.view
                 DisplayAlbums();
             }
             DisplaySongs();
+
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Excel Documents (*.xlsx) | *.xlsx";
+            save.FileName = "Report Release.xlsx";
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                string directory = Path.GetDirectoryName(save.FileName);
+                string fileNameWithoutExt = Path.GetFileNameWithoutExtension(save.FileName);
+                string extension = Path.GetExtension(save.FileName);
+                int count = 1;
+                string filePath = save.FileName;
+
+                while (File.Exists(filePath))
+                {
+                    filePath = Path.Combine(directory, $"{fileNameWithoutExt} ({count}){extension}");
+                    count++;
+                }
+
+                Excel excel_lib = new Excel();
+                excel_lib.ExportToExcel(releasesDataGridView, filePath);
+
+                MessageBox.Show("Data berhasil di export ke excel", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
     }

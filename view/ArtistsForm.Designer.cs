@@ -29,7 +29,7 @@ namespace RYHME.view
             searchTextBox = new TextBox();
             searchButton = new Button();
             artistsDataGridView = new DataGridView();
-            refreshButton = new Button();
+            exportButton = new Button();
             ((System.ComponentModel.ISupportInitialize)artistsDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -72,7 +72,7 @@ namespace RYHME.view
             // nameTextBox
             // 
             nameTextBox.Location = new Point(96, 16);
-            nameTextBox.Margin = new Padding(2, 2, 2, 2);
+            nameTextBox.Margin = new Padding(2);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(290, 27);
             nameTextBox.TabIndex = 4;
@@ -80,7 +80,7 @@ namespace RYHME.view
             // genreTextBox
             // 
             genreTextBox.Location = new Point(96, 48);
-            genreTextBox.Margin = new Padding(2, 2, 2, 2);
+            genreTextBox.Margin = new Padding(2);
             genreTextBox.Name = "genreTextBox";
             genreTextBox.Size = new Size(290, 27);
             genreTextBox.TabIndex = 5;
@@ -88,7 +88,7 @@ namespace RYHME.view
             // contactTextBox
             // 
             contactTextBox.Location = new Point(96, 80);
-            contactTextBox.Margin = new Padding(2, 2, 2, 2);
+            contactTextBox.Margin = new Padding(2);
             contactTextBox.Name = "contactTextBox";
             contactTextBox.Size = new Size(290, 27);
             contactTextBox.TabIndex = 6;
@@ -96,7 +96,7 @@ namespace RYHME.view
             // profilePictureTextBox
             // 
             profilePictureTextBox.Location = new Point(96, 112);
-            profilePictureTextBox.Margin = new Padding(2, 2, 2, 2);
+            profilePictureTextBox.Margin = new Padding(2);
             profilePictureTextBox.Name = "profilePictureTextBox";
             profilePictureTextBox.Size = new Size(290, 27);
             profilePictureTextBox.TabIndex = 7;
@@ -104,7 +104,7 @@ namespace RYHME.view
             // addButton
             // 
             addButton.Location = new Point(539, 38);
-            addButton.Margin = new Padding(2, 2, 2, 2);
+            addButton.Margin = new Padding(2);
             addButton.Name = "addButton";
             addButton.Size = new Size(74, 29);
             addButton.TabIndex = 8;
@@ -114,7 +114,7 @@ namespace RYHME.view
             // updateButton
             // 
             updateButton.Location = new Point(438, 80);
-            updateButton.Margin = new Padding(2, 2, 2, 2);
+            updateButton.Margin = new Padding(2);
             updateButton.Name = "updateButton";
             updateButton.Size = new Size(67, 29);
             updateButton.TabIndex = 9;
@@ -124,7 +124,7 @@ namespace RYHME.view
             // deleteButton
             // 
             deleteButton.Location = new Point(539, 80);
-            deleteButton.Margin = new Padding(2, 2, 2, 2);
+            deleteButton.Margin = new Padding(2);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(74, 29);
             deleteButton.TabIndex = 10;
@@ -134,7 +134,7 @@ namespace RYHME.view
             // searchTextBox
             // 
             searchTextBox.Location = new Point(16, 174);
-            searchTextBox.Margin = new Padding(2, 2, 2, 2);
+            searchTextBox.Margin = new Padding(2);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(192, 27);
             searchTextBox.TabIndex = 11;
@@ -142,7 +142,7 @@ namespace RYHME.view
             // searchButton
             // 
             searchButton.Location = new Point(247, 174);
-            searchButton.Margin = new Padding(2, 2, 2, 2);
+            searchButton.Margin = new Padding(2);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(62, 27);
             searchButton.TabIndex = 12;
@@ -153,27 +153,28 @@ namespace RYHME.view
             // 
             artistsDataGridView.ColumnHeadersHeight = 34;
             artistsDataGridView.Location = new Point(16, 208);
-            artistsDataGridView.Margin = new Padding(2, 2, 2, 2);
+            artistsDataGridView.Margin = new Padding(2);
             artistsDataGridView.Name = "artistsDataGridView";
             artistsDataGridView.RowHeadersWidth = 62;
             artistsDataGridView.Size = new Size(608, 144);
             artistsDataGridView.TabIndex = 13;
             // 
-            // refreshButton
+            // exportButton
             // 
-            refreshButton.Location = new Point(438, 38);
-            refreshButton.Margin = new Padding(2, 2, 2, 2);
-            refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(67, 29);
-            refreshButton.TabIndex = 14;
-            refreshButton.Text = "Refresh";
+            exportButton.Location = new Point(438, 38);
+            exportButton.Margin = new Padding(2);
+            exportButton.Name = "exportButton";
+            exportButton.Size = new Size(67, 29);
+            exportButton.TabIndex = 14;
+            exportButton.Text = "Export";
+            exportButton.Click += exportButton_Click;
             // 
             // ArtistsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 360);
-            Controls.Add(refreshButton);
+            Controls.Add(exportButton);
             Controls.Add(nameLabel);
             Controls.Add(genreLabel);
             Controls.Add(contactLabel);
@@ -188,7 +189,7 @@ namespace RYHME.view
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
             Controls.Add(artistsDataGridView);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "ArtistsForm";
             Text = "ArtistsForm";
             ((System.ComponentModel.ISupportInitialize)artistsDataGridView).EndInit();
@@ -210,6 +211,6 @@ namespace RYHME.view
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.DataGridView artistsDataGridView;
-        private Button refreshButton;
+        private Button exportButton;
     }
 }

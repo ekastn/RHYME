@@ -25,7 +25,7 @@ namespace RYHME.view
             searchTextBox = new TextBox();
             searchButton = new Button();
             albumsDataGridView = new DataGridView();
-            refreshButton = new Button();
+            exportButton = new Button();
             ((System.ComponentModel.ISupportInitialize)albumsDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -121,21 +121,22 @@ namespace RYHME.view
             albumsDataGridView.Size = new Size(629, 176);
             albumsDataGridView.TabIndex = 17;
             // 
-            // refreshButton
+            // exportButton
             // 
-            refreshButton.Location = new Point(438, 58);
-            refreshButton.Margin = new Padding(2);
-            refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(67, 29);
-            refreshButton.TabIndex = 18;
-            refreshButton.Text = "Refresh";
+            exportButton.Location = new Point(438, 58);
+            exportButton.Margin = new Padding(2);
+            exportButton.Name = "exportButton";
+            exportButton.Size = new Size(67, 29);
+            exportButton.TabIndex = 18;
+            exportButton.Text = "Export";
+            exportButton.Click += exportButton_Click;
             // 
             // AlbumsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(648, 406);
-            Controls.Add(refreshButton);
+            Controls.Add(exportButton);
             Controls.Add(titleLabel);
             Controls.Add(artistLabel);
             Controls.Add(titleTextBox);
@@ -164,6 +165,6 @@ namespace RYHME.view
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.DataGridView albumsDataGridView;
-        private Button refreshButton;
+        private Button exportButton;
     }
 }

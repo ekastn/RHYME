@@ -27,7 +27,7 @@ namespace RYHME.view
             updateReleaseButton = new Button();
             deleteReleaseButton = new Button();
             releasesDataGridView = new DataGridView();
-            refreshButton = new Button();
+            exportButton = new Button();
             searchButton = new Button();
             searchTextBox = new TextBox();
             typeLabel = new Label();
@@ -119,13 +119,14 @@ namespace RYHME.view
             releasesDataGridView.Size = new Size(801, 163);
             releasesDataGridView.TabIndex = 9;
             // 
-            // refreshButton
+            // exportButton
             // 
-            refreshButton.Location = new Point(529, 52);
-            refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(96, 33);
-            refreshButton.TabIndex = 15;
-            refreshButton.Text = "Refresh";
+            exportButton.Location = new Point(529, 52);
+            exportButton.Name = "exportButton";
+            exportButton.Size = new Size(96, 33);
+            exportButton.TabIndex = 15;
+            exportButton.Text = "Export";
+            exportButton.Click += exportButton_Click;
             // 
             // searchButton
             // 
@@ -184,7 +185,7 @@ namespace RYHME.view
             Controls.Add(typeLabel);
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
-            Controls.Add(refreshButton);
+            Controls.Add(exportButton);
             Controls.Add(albumOrSongLabel);
             Controls.Add(releaseDateLabel);
             Controls.Add(statusLabel);
@@ -212,7 +213,7 @@ namespace RYHME.view
         private System.Windows.Forms.Button updateReleaseButton;
         private System.Windows.Forms.Button deleteReleaseButton;
         private System.Windows.Forms.DataGridView releasesDataGridView;
-        private Button refreshButton;
+        private Button exportButton;
         private Button searchButton;
         private TextBox searchTextBox;
         private Label typeLabel;

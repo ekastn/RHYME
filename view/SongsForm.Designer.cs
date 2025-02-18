@@ -27,6 +27,7 @@ namespace RYHME.view
             searchTextBox = new TextBox();
             searchButton = new Button();
             songsDataGridView = new DataGridView();
+            exportButton = new Button();
             ((System.ComponentModel.ISupportInitialize)songsDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -58,26 +59,26 @@ namespace RYHME.view
             // 
             titleTextBox.Location = new Point(163, 52);
             titleTextBox.Name = "titleTextBox";
-            titleTextBox.Size = new Size(141, 31);
+            titleTextBox.Size = new Size(141, 27);
             titleTextBox.TabIndex = 6;
             // 
             // albumComboBox
             // 
             albumComboBox.Location = new Point(377, 94);
             albumComboBox.Name = "albumComboBox";
-            albumComboBox.Size = new Size(141, 33);
+            albumComboBox.Size = new Size(141, 28);
             albumComboBox.TabIndex = 7;
             // 
             // durationTextBox
             // 
             durationTextBox.Location = new Point(163, 94);
             durationTextBox.Name = "durationTextBox";
-            durationTextBox.Size = new Size(142, 31);
+            durationTextBox.Size = new Size(142, 27);
             durationTextBox.TabIndex = 8;
             // 
             // addButton
             // 
-            addButton.Location = new Point(547, 151);
+            addButton.Location = new Point(640, 111);
             addButton.Name = "addButton";
             addButton.Size = new Size(87, 32);
             addButton.TabIndex = 10;
@@ -106,7 +107,7 @@ namespace RYHME.view
             // 
             searchTextBox.Location = new Point(14, 149);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(338, 31);
+            searchTextBox.Size = new Size(338, 27);
             searchTextBox.TabIndex = 13;
             // 
             // searchButton
@@ -127,9 +128,19 @@ namespace RYHME.view
             songsDataGridView.Size = new Size(806, 184);
             songsDataGridView.TabIndex = 15;
             // 
+            // exportButton
+            // 
+            exportButton.Location = new Point(733, 111);
+            exportButton.Name = "exportButton";
+            exportButton.Size = new Size(87, 32);
+            exportButton.TabIndex = 16;
+            exportButton.Text = "Export";
+            exportButton.Click += exportButton_Click;
+            // 
             // SongsForm
             // 
             ClientSize = new Size(832, 384);
+            Controls.Add(exportButton);
             Controls.Add(titleLabel);
             Controls.Add(albumLabel);
             Controls.Add(durationLabel);
@@ -160,5 +171,6 @@ namespace RYHME.view
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.DataGridView songsDataGridView;
+        private Button exportButton;
     }
 }
