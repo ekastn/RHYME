@@ -65,7 +65,7 @@ namespace RYHME.view
             // 
             // addButton
             // 
-            addButton.Location = new Point(551, 58);
+            addButton.Location = new Point(553, 47);
             addButton.Margin = new Padding(2);
             addButton.Name = "addButton";
             addButton.Size = new Size(70, 29);
@@ -75,7 +75,7 @@ namespace RYHME.view
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(437, 105);
+            updateButton.Location = new Point(439, 94);
             updateButton.Margin = new Padding(2);
             updateButton.Name = "updateButton";
             updateButton.Size = new Size(69, 29);
@@ -85,7 +85,7 @@ namespace RYHME.view
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(551, 105);
+            deleteButton.Location = new Point(553, 94);
             deleteButton.Margin = new Padding(2);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(70, 29);
@@ -95,7 +95,7 @@ namespace RYHME.view
             // 
             // searchTextBox
             // 
-            searchTextBox.Location = new Point(319, 191);
+            searchTextBox.Location = new Point(319, 181);
             searchTextBox.Margin = new Padding(2);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(218, 27);
@@ -103,7 +103,7 @@ namespace RYHME.view
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(552, 190);
+            searchButton.Location = new Point(552, 180);
             searchButton.Margin = new Padding(2);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(70, 26);
@@ -123,7 +123,7 @@ namespace RYHME.view
             // 
             // exportButton
             // 
-            exportButton.Location = new Point(438, 58);
+            exportButton.Location = new Point(440, 47);
             exportButton.Margin = new Padding(2);
             exportButton.Name = "exportButton";
             exportButton.Size = new Size(67, 29);

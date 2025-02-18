@@ -25,7 +25,7 @@ namespace RYHME
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(365, 118);
+            txtUsername.Location = new Point(363, 87);
             txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(228, 27);
@@ -34,7 +34,7 @@ namespace RYHME
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(365, 171);
+            txtPassword.Location = new Point(363, 140);
             txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(228, 27);
@@ -44,7 +44,7 @@ namespace RYHME
             // btnLogin
             // 
             btnLogin.BackColor = Color.Transparent;
-            btnLogin.Location = new Point(428, 216);
+            btnLogin.Location = new Point(426, 185);
             btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(112, 30);
@@ -56,7 +56,9 @@ namespace RYHME
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(250, 122);
+            lblUsername.BackColor = Color.Transparent;
+            lblUsername.ForeColor = SystemColors.ControlLightLight;
+            lblUsername.Location = new Point(248, 91);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(75, 20);
             lblUsername.TabIndex = 4;
@@ -65,7 +67,9 @@ namespace RYHME
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(250, 176);
+            lblPassword.BackColor = Color.Transparent;
+            lblPassword.ForeColor = SystemColors.ControlLightLight;
+            lblPassword.Location = new Point(248, 145);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(70, 20);
             lblPassword.TabIndex = 5;
@@ -76,11 +80,11 @@ namespace RYHME
             labelRegister.AutoSize = true;
             labelRegister.BackColor = Color.Transparent;
             labelRegister.ForeColor = SystemColors.ButtonHighlight;
-            labelRegister.Location = new Point(455, 261);
+            labelRegister.Location = new Point(379, 228);
             labelRegister.Name = "labelRegister";
-            labelRegister.Size = new Size(63, 20);
+            labelRegister.Size = new Size(201, 20);
             labelRegister.TabIndex = 6;
-            labelRegister.Text = "Register";
+            labelRegister.Text = "Don't have account? Register";
             labelRegister.Click += labelRegister_Click;
             // 
             // LoginForm

@@ -23,8 +23,8 @@ namespace RYHME
             ReleaseController releaseController = new ReleaseController(dbContext);
             UserController userController = new UserController(dbContext);
 
-            //Application.Run(new StartUpForm());
-            //Application.Run(new LoginForm(userController));
+            Application.Run(new StartUpForm());
+            Application.Run(new LoginForm(userController));
             Application.Run(new MainForm(artistController, albumController, songController, releaseController, userController));
         }
     }
