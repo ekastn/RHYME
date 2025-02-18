@@ -15,18 +15,10 @@ namespace RYHME.view
 
         private void InitializeComponent()
         {
-            idLabel = new Label();
             titleLabel = new Label();
             artistLabel = new Label();
-            releaseYearLabel = new Label();
-            genreLabel = new Label();
-            coverImageLabel = new Label();
-            idTextBox = new TextBox();
             titleTextBox = new TextBox();
             artistsComboBox = new ComboBox();
-            releaseYearTextBox = new TextBox();
-            genreTextBox = new TextBox();
-            coverImageTextBox = new TextBox();
             addButton = new Button();
             updateButton = new Button();
             deleteButton = new Button();
@@ -37,18 +29,9 @@ namespace RYHME.view
             ((System.ComponentModel.ISupportInitialize)albumsDataGridView).BeginInit();
             SuspendLayout();
             // 
-            // idLabel
-            // 
-            idLabel.Location = new Point(17, 155);
-            idLabel.Margin = new Padding(2, 0, 2, 0);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new Size(80, 18);
-            idLabel.TabIndex = 0;
-            idLabel.Text = "ID";
-            // 
             // titleLabel
             // 
-            titleLabel.Location = new Point(17, 125);
+            titleLabel.Location = new Point(18, 41);
             titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
             titleLabel.Size = new Size(80, 18);
@@ -57,52 +40,17 @@ namespace RYHME.view
             // 
             // artistLabel
             // 
-            artistLabel.Location = new Point(17, 93);
+            artistLabel.Location = new Point(18, 97);
             artistLabel.Margin = new Padding(2, 0, 2, 0);
             artistLabel.Name = "artistLabel";
             artistLabel.Size = new Size(80, 18);
             artistLabel.TabIndex = 2;
             artistLabel.Text = "Artist";
             // 
-            // releaseYearLabel
-            // 
-            releaseYearLabel.Location = new Point(17, 62);
-            releaseYearLabel.Margin = new Padding(2, 0, 2, 0);
-            releaseYearLabel.Name = "releaseYearLabel";
-            releaseYearLabel.Size = new Size(80, 18);
-            releaseYearLabel.TabIndex = 3;
-            releaseYearLabel.Text = "Release Year";
-            // 
-            // genreLabel
-            // 
-            genreLabel.Location = new Point(17, 36);
-            genreLabel.Margin = new Padding(2, 0, 2, 0);
-            genreLabel.Name = "genreLabel";
-            genreLabel.Size = new Size(80, 18);
-            genreLabel.TabIndex = 4;
-            genreLabel.Text = "Genre";
-            // 
-            // coverImageLabel
-            // 
-            coverImageLabel.Location = new Point(17, 9);
-            coverImageLabel.Margin = new Padding(2, 0, 2, 0);
-            coverImageLabel.Name = "coverImageLabel";
-            coverImageLabel.Size = new Size(80, 18);
-            coverImageLabel.TabIndex = 5;
-            coverImageLabel.Text = "Cover Image";
-            // 
-            // idTextBox
-            // 
-            idTextBox.Location = new Point(102, 155);
-            idTextBox.Margin = new Padding(2, 2, 2, 2);
-            idTextBox.Name = "idTextBox";
-            idTextBox.Size = new Size(265, 27);
-            idTextBox.TabIndex = 6;
-            // 
             // titleTextBox
             // 
-            titleTextBox.Location = new Point(102, 126);
-            titleTextBox.Margin = new Padding(2, 2, 2, 2);
+            titleTextBox.Location = new Point(102, 41);
+            titleTextBox.Margin = new Padding(2);
             titleTextBox.Name = "titleTextBox";
             titleTextBox.Size = new Size(265, 27);
             titleTextBox.TabIndex = 7;
@@ -110,39 +58,15 @@ namespace RYHME.view
             // artistsComboBox
             // 
             artistsComboBox.Location = new Point(102, 94);
-            artistsComboBox.Margin = new Padding(2, 2, 2, 2);
+            artistsComboBox.Margin = new Padding(2);
             artistsComboBox.Name = "artistsComboBox";
             artistsComboBox.Size = new Size(265, 28);
             artistsComboBox.TabIndex = 8;
             // 
-            // releaseYearTextBox
-            // 
-            releaseYearTextBox.Location = new Point(102, 66);
-            releaseYearTextBox.Margin = new Padding(2, 2, 2, 2);
-            releaseYearTextBox.Name = "releaseYearTextBox";
-            releaseYearTextBox.Size = new Size(265, 27);
-            releaseYearTextBox.TabIndex = 9;
-            // 
-            // genreTextBox
-            // 
-            genreTextBox.Location = new Point(102, 36);
-            genreTextBox.Margin = new Padding(2, 2, 2, 2);
-            genreTextBox.Name = "genreTextBox";
-            genreTextBox.Size = new Size(265, 27);
-            genreTextBox.TabIndex = 10;
-            // 
-            // coverImageTextBox
-            // 
-            coverImageTextBox.Location = new Point(102, 10);
-            coverImageTextBox.Margin = new Padding(2, 2, 2, 2);
-            coverImageTextBox.Name = "coverImageTextBox";
-            coverImageTextBox.Size = new Size(265, 27);
-            coverImageTextBox.TabIndex = 11;
-            // 
             // addButton
             // 
             addButton.Location = new Point(551, 58);
-            addButton.Margin = new Padding(2, 2, 2, 2);
+            addButton.Margin = new Padding(2);
             addButton.Name = "addButton";
             addButton.Size = new Size(70, 29);
             addButton.TabIndex = 12;
@@ -152,7 +76,7 @@ namespace RYHME.view
             // updateButton
             // 
             updateButton.Location = new Point(437, 105);
-            updateButton.Margin = new Padding(2, 2, 2, 2);
+            updateButton.Margin = new Padding(2);
             updateButton.Name = "updateButton";
             updateButton.Size = new Size(69, 29);
             updateButton.TabIndex = 13;
@@ -162,7 +86,7 @@ namespace RYHME.view
             // deleteButton
             // 
             deleteButton.Location = new Point(551, 105);
-            deleteButton.Margin = new Padding(2, 2, 2, 2);
+            deleteButton.Margin = new Padding(2);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(70, 29);
             deleteButton.TabIndex = 14;
@@ -172,7 +96,7 @@ namespace RYHME.view
             // searchTextBox
             // 
             searchTextBox.Location = new Point(319, 191);
-            searchTextBox.Margin = new Padding(2, 2, 2, 2);
+            searchTextBox.Margin = new Padding(2);
             searchTextBox.Name = "searchTextBox";
             searchTextBox.Size = new Size(218, 27);
             searchTextBox.TabIndex = 15;
@@ -180,7 +104,7 @@ namespace RYHME.view
             // searchButton
             // 
             searchButton.Location = new Point(552, 190);
-            searchButton.Margin = new Padding(2, 2, 2, 2);
+            searchButton.Margin = new Padding(2);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(70, 26);
             searchButton.TabIndex = 16;
@@ -191,7 +115,7 @@ namespace RYHME.view
             // 
             albumsDataGridView.ColumnHeadersHeight = 34;
             albumsDataGridView.Location = new Point(10, 221);
-            albumsDataGridView.Margin = new Padding(2, 2, 2, 2);
+            albumsDataGridView.Margin = new Padding(2);
             albumsDataGridView.Name = "albumsDataGridView";
             albumsDataGridView.RowHeadersWidth = 62;
             albumsDataGridView.Size = new Size(629, 176);
@@ -200,7 +124,7 @@ namespace RYHME.view
             // refreshButton
             // 
             refreshButton.Location = new Point(438, 58);
-            refreshButton.Margin = new Padding(2, 2, 2, 2);
+            refreshButton.Margin = new Padding(2);
             refreshButton.Name = "refreshButton";
             refreshButton.Size = new Size(67, 29);
             refreshButton.TabIndex = 18;
@@ -212,25 +136,17 @@ namespace RYHME.view
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(648, 406);
             Controls.Add(refreshButton);
-            Controls.Add(idLabel);
             Controls.Add(titleLabel);
             Controls.Add(artistLabel);
-            Controls.Add(releaseYearLabel);
-            Controls.Add(genreLabel);
-            Controls.Add(coverImageLabel);
-            Controls.Add(idTextBox);
             Controls.Add(titleTextBox);
             Controls.Add(artistsComboBox);
-            Controls.Add(releaseYearTextBox);
-            Controls.Add(genreTextBox);
-            Controls.Add(coverImageTextBox);
             Controls.Add(addButton);
             Controls.Add(updateButton);
             Controls.Add(deleteButton);
             Controls.Add(searchTextBox);
             Controls.Add(searchButton);
             Controls.Add(albumsDataGridView);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "AlbumsForm";
             Text = "AlbumsForm";
             ((System.ComponentModel.ISupportInitialize)albumsDataGridView).EndInit();
@@ -238,18 +154,10 @@ namespace RYHME.view
             PerformLayout();
         }
 
-        private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label artistLabel;
-        private System.Windows.Forms.Label releaseYearLabel;
-        private System.Windows.Forms.Label genreLabel;
-        private System.Windows.Forms.Label coverImageLabel;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.ComboBox artistsComboBox;
-        private System.Windows.Forms.TextBox releaseYearTextBox;
-        private System.Windows.Forms.TextBox genreTextBox;
-        private System.Windows.Forms.TextBox coverImageTextBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button deleteButton;

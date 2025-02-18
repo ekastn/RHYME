@@ -13,6 +13,8 @@ namespace RYHME.view
             _albumController = albumController;
             _artistController = artistController;
             InitializeComponent();
+            LoadAlbums();
+            LoadArtists();
         }
 
         private void LoadAlbums()
@@ -24,6 +26,7 @@ namespace RYHME.view
         private void LoadArtists()
         {
             var artists = _artistController.GetAllArtists();
+            MessageBox.Show(artists.ToString());
             artistsComboBox.DataSource = artists;
             artistsComboBox.DisplayMember = "Name";
             artistsComboBox.ValueMember = "Id";
