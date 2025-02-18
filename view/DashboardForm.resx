@@ -117,4 +117,236 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="&gt;&gt;lblTotalSongs.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTotalAlbums.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblTotalArtists.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddSong.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnAddAlbum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 101</value>
+  </data>
+  <data name="lblTotalAlbums.Text" xml:space="preserve">
+    <value>Total Albums:</value>
+  </data>
+  <data name="&gt;&gt;btnAddSong.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblTotalSongs.Text" xml:space="preserve">
+    <value>Total Songs:</value>
+  </data>
+  <data name="&gt;&gt;btnAddAlbum.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnAddAlbum.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnAddSong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 197</value>
+  </data>
+  <data name="&gt;&gt;lblTotalSongs.Name" xml:space="preserve">
+    <value>lblTotalSongs</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnAddAlbum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="lblUpcomingReleases.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnAddArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="lblTotalArtists.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="lblUpcomingReleases.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblTotalAlbums.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="&gt;&gt;lblTotalArtists.Name" xml:space="preserve">
+    <value>lblTotalArtists</value>
+  </data>
+  <data name="lblUpcomingReleases.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 25</value>
+  </data>
+  <data name="lblTotalArtists.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 25</value>
+  </data>
+  <data name="&gt;&gt;btnAddAlbum.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblUpcomingReleases.Text" xml:space="preserve">
+    <value>Upcoming Releases:</value>
+  </data>
+  <data name="lblTotalAlbums.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 25</value>
+  </data>
+  <data name="lblTotalArtists.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 219</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>864, 551</value>
+  </data>
+  <data name="btnAddArtist.Text" xml:space="preserve">
+    <value>Add Artist</value>
+  </data>
+  <data name="&gt;&gt;btnAddAlbum.Name" xml:space="preserve">
+    <value>btnAddAlbum</value>
+  </data>
+  <data name="&gt;&gt;btnAddSong.Name" xml:space="preserve">
+    <value>btnAddSong</value>
+  </data>
+  <data name="&gt;&gt;lblTotalSongs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblUpcomingReleases.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddArtist.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblTotalSongs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 25</value>
+  </data>
+  <data name="&gt;&gt;lblTotalArtists.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblUpcomingReleases.Name" xml:space="preserve">
+    <value>lblUpcomingReleases</value>
+  </data>
+  <data name="lblTotalAlbums.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DashboardForm</value>
+  </data>
+  <data name="btnAddSong.Text" xml:space="preserve">
+    <value>Add Song</value>
+  </data>
+  <data name="&gt;&gt;lblTotalAlbums.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblTotalAlbums.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblTotalArtists.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTotalAlbums.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 219</value>
+  </data>
+  <data name="lblTotalSongs.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnAddSong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 38</value>
+  </data>
+  <data name="lblTotalArtists.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="btnAddAlbum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 38</value>
+  </data>
+  <data name="&gt;&gt;btnAddArtist.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblUpcomingReleases.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 299</value>
+  </data>
+  <data name="btnAddAlbum.Text" xml:space="preserve">
+    <value>Add Album</value>
+  </data>
+  <data name="&gt;&gt;btnAddSong.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnAddArtist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 149</value>
+  </data>
+  <data name="lblTotalSongs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblTotalArtists.Text" xml:space="preserve">
+    <value>Total Artists:</value>
+  </data>
+  <data name="&gt;&gt;lblTotalArtists.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnAddArtist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUpcomingReleases.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblTotalSongs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTotalSongs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 299</value>
+  </data>
+  <data name="&gt;&gt;lblTotalSongs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTotalAlbums.Name" xml:space="preserve">
+    <value>lblTotalAlbums</value>
+  </data>
+  <data name="&gt;&gt;btnAddArtist.Name" xml:space="preserve">
+    <value>btnAddArtist</value>
+  </data>
+  <data name="btnAddSong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="btnAddSong.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnAddArtist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 38</value>
+  </data>
+  <data name="&gt;&gt;btnAddAlbum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblUpcomingReleases.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnAddArtist.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblTotalAlbums.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUpcomingReleases.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>af</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
