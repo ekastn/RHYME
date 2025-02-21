@@ -1,5 +1,6 @@
 using RYHME.view;
 using RYHME.Controllers;
+using RYHME.Utils;
 
 namespace RYHME
 {
@@ -11,18 +12,21 @@ namespace RYHME
         private readonly SongController _songController;
         private readonly ReleaseController _releaseController;
         private readonly UserController _userController;
+        private readonly SessionManager _sessionManager;
 
         public MainForm(ArtistController artistController,
             AlbumController albumController,
             SongController songController,
             ReleaseController releaseController,
-            UserController userController)
+            UserController userController,
+            SessionManager sessionManager)
         {
             _artistController = artistController;
             _albumController = albumController;
             _songController = songController;
             _releaseController = releaseController;
             _userController = userController;
+            _sessionManager = sessionManager;
             InitializeComponent();
         }
 
@@ -50,7 +54,7 @@ namespace RYHME
 
         private void buttonNavArtists_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ArtistsForm(_artistController));
+            OpenChildForm(new ArtistsForm(_artistController, _sessionManager));
         }
 
         private void buttonNavAlbums_Click(object sender, EventArgs e)
@@ -75,6 +79,7 @@ namespace RYHME
 
         private void button5_Click(object sender, EventArgs e)
         {
+            _sessionManager.SetLoggedInUser(null);
             Application.Exit();
         }
 

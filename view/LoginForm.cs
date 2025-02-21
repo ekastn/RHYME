@@ -3,16 +3,19 @@ using System.Text;
 using System.Windows.Forms;
 using RYHME.Controllers;
 using RYHME.view;
+using RYHME.Utils;
 
 namespace RYHME
 {
     public partial class LoginForm : Form
     {
         private readonly UserController _userController;
+        private readonly SessionManager _sessionManager;
 
-        public LoginForm(UserController userController)
+        public LoginForm(UserController userController, SessionManager sessionManager)
         {
             _userController = userController;
+            _sessionManager = sessionManager;
             InitializeComponent();
         }
 
@@ -36,6 +39,7 @@ namespace RYHME
 
             if (user != null)
             {
+                _sessionManager.SetLoggedInUser(user);
                 Close();
             }
             else

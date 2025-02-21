@@ -1,6 +1,7 @@
 using RYHME.Controllers;
 using RYHME.Database;
 using RYHME.view;
+using RYHME.Utils;
 
 namespace RYHME
 {
@@ -22,10 +23,11 @@ namespace RYHME
             SongController songController = new SongController(dbContext);
             ReleaseController releaseController = new ReleaseController(dbContext);
             UserController userController = new UserController(dbContext);
+            SessionManager sessionManager = new SessionManager();
 
             Application.Run(new StartUpForm());
-            Application.Run(new LoginForm(userController));
-            Application.Run(new MainForm(artistController, albumController, songController, releaseController, userController));
+            Application.Run(new LoginForm(userController, sessionManager));
+            Application.Run(new MainForm(artistController, albumController, songController, releaseController, userController, sessionManager));
         }
     }
 }
