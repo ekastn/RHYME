@@ -24,6 +24,7 @@ namespace RYHME
             SongController songController = new SongController(dbContext, sessionManager);
             ReleaseController releaseController = new ReleaseController(dbContext, sessionManager);
             UserController userController = new UserController(dbContext);
+            SessionManager sessionManager = new SessionManager();
 
             Application.Run(new StartUpForm());
             Application.Run(new LoginForm(userController, sessionManager));

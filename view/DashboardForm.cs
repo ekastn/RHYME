@@ -12,13 +12,15 @@ namespace RYHME
         private readonly AlbumController _albumController;
         private readonly SongController _songController;
         private readonly ReleaseController _releaseController;
+        private readonly SessionManager _sessionManager;
 
-        public DashboardForm(ArtistController artistController, AlbumController albumController, SongController songController, ReleaseController releaseController)
+        public DashboardForm(ArtistController artistController, AlbumController albumController, SongController songController, ReleaseController releaseController, SessionManager sessionManager)
         {
             _artistController = artistController;
             _albumController = albumController;
             _songController = songController;
             _releaseController = releaseController;
+            _sessionManager = sessionManager;
             InitializeComponent();
         }
 
@@ -42,7 +44,7 @@ namespace RYHME
 
         private void btnAddArtist_Click(object sender, EventArgs e)
         {
-            var artistsForm = new ArtistsForm(_artistController);
+            var artistsForm = new ArtistsForm(_artistController, _sessionManager);
             artistsForm.Show();
         }
 

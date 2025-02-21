@@ -54,7 +54,7 @@ namespace RYHME
 
         private void buttonNavArtists_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ArtistsForm(_artistController));
+            OpenChildForm(new ArtistsForm(_artistController, _sessionManager));
         }
 
         private void buttonNavAlbums_Click(object sender, EventArgs e)

@@ -1,6 +1,5 @@
 using RYHME.Controllers;
 using RYHME.Models;
-using RYHME.Utils;
 
 namespace RYHME.view
 {
