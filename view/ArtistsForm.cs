@@ -35,8 +35,7 @@ namespace RYHME.view
             {
                 Name = nameTextBox.Text,
                 Genre = genreTextBox.Text,
-                Contact = contactTextBox.Text,
-                ManagerId = 1 // FIXME: Hardcoded manager ID
+                Contact = contactTextBox.Text
             };
             _artistController.AddArtist(artist);
             LoadArtists();

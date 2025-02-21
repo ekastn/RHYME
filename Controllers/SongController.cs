@@ -3,26 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using RYHME.Database;
 using RYHME.Models;
+using RYHME.Utils;
 
 namespace RYHME.Controllers
 {
     public class SongController
     {
         private readonly AppDbContext _context;
+        private readonly SessionManager _sessionManager;
 
-        public SongController(AppDbContext context)
+        public SongController(AppDbContext context, SessionManager sessionManager)
         {
             _context = context;
+            _sessionManager = sessionManager;
         }
 
         public List<Song> GetAllSongs()
         {
-            return _context.Songs.ToList();
+            var loggedInUser = _sessionManager.GetLoggedInUser();
+            return _context.Songs
+                .Where(s => s.Album.Artist.ManagerId == loggedInUser.Id)
+                .ToList();
         }
 
         public Song GetSongById(int id)
         {
-            return _context.Songs.FirstOrDefault(s => s.Id == id);
+            var loggedInUser = _sessionManager.GetLoggedInUser();
+            return _context.Songs
+                .FirstOrDefault(s => s.Id == id && s.Album.Artist.ManagerId == loggedInUser.Id);
         }
 
         public void AddSong(Song song)
@@ -33,7 +41,9 @@ namespace RYHME.Controllers
 
         public void UpdateSong(Song song)
         {
-            var existingSong = _context.Songs.FirstOrDefault(s => s.Id == song.Id);
+            var loggedInUser = _sessionManager.GetLoggedInUser();
+            var existingSong = _context.Songs
+                .FirstOrDefault(s => s.Id == song.Id && s.Album.Artist.ManagerId == loggedInUser.Id);
             if (existingSong != null)
             {
                 existingSong.Title = song.Title;
@@ -46,7 +56,9 @@ namespace RYHME.Controllers
 
         public void DeleteSong(int id)
         {
-            var song = _context.Songs.FirstOrDefault(s => s.Id == id);
+            var loggedInUser = _sessionManager.GetLoggedInUser();
+            var song = _context.Songs
+                .FirstOrDefault(s => s.Id == id && s.Album.Artist.ManagerId == loggedInUser.Id);
             if (song != null)
             {
                 _context.Songs.Remove(song);

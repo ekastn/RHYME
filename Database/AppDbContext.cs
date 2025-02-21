@@ -1,10 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RYHME.Models;
+using RYHME.Utils;
 
 namespace RYHME.Database;
 
 public class AppDbContext : DbContext
 {
+    private readonly SessionManager _sessionManager;
+
+    public AppDbContext(SessionManager sessionManager)
+    {
+        _sessionManager = sessionManager;
+    }
+
     public DbSet<Artist> Artists { get; set; }
     public DbSet<Album> Albums { get; set; }
     public DbSet<Song> Songs { get; set; }
@@ -64,5 +72,25 @@ public class AppDbContext : DbContext
                     .HasDefaultValueSql("CURRENT_TIMESTAMP"); // MySQL syntax
             }
         }
+    }
+
+    public override int SaveChanges()
+    {
+        var loggedInUser = _sessionManager.GetLoggedInUser();
+        if (loggedInUser != null)
+        {
+            foreach (var entry in ChangeTracker.Entries())
+            {
+                if (entry.Entity is Artist artist)
+                {
+                    artist.ManagerId = loggedInUser.Id;
+                }
+                else if (entry.Entity is Release release)
+                {
+                    release.CreatedByUserId = loggedInUser.Id;
+                }
+            }
+        }
+        return base.SaveChanges();
     }
 }

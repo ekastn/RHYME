@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RYHME.Utils;
 
 namespace RYHME.view
 {
@@ -18,12 +19,14 @@ namespace RYHME.view
 
         private readonly UserController _userController;
         private LoginForm _loginForm;
+        private readonly SessionManager _sessionManager;
 
-        public RegisterForm(UserController userController, LoginForm loginform)
+        public RegisterForm(UserController userController, LoginForm loginform, SessionManager sessionManager)
         {
             _loginForm = loginform;
             InitializeComponent();
             _userController = userController;
+            _sessionManager = sessionManager;
         }
 
         private void RegisterUser()
